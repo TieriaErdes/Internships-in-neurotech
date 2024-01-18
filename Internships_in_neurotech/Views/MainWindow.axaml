@@ -3,18 +3,90 @@
         xmlns:vm="using:Internships_in_neurotech.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:controls="clr-namespace:Internships_in_neurotech"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Internships_in_neurotech.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="Internships_in_neurotech">
 
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
+	<Design.DataContext>
+		<!-- This only sets the DataContext for the previewer in an IDE,
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
+		<vm:MainWindowViewModel/>
+	</Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+	<Window.Styles>
+		<!--top button Styles-->
+		<Style Selector="Button.topFunc">
+			<Setter Property="Height" Value="32"/>
+			<Setter Property="Background" Value="#353535"/>
+			<Setter Property="FontSize" Value="14"/>
+			<Setter Property="Foreground" Value="#C4C4C4"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+			<Setter Property="Margin" Value="4, 0, 4, 0"/>
+		</Style>
+
+		<Style Selector="Button.topFunc:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background" Value="#303030"/>
+			<Setter Property="Foreground" Value="#C4C4C4"/>
+		</Style>
+
+		<Style Selector="Button:pressed /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background" Value="#252525"/>
+			<Setter Property="Foreground" Value="#C4C4C4"/>
+		</Style>
+
+		<!--Label styles-->
+		<Style Selector="Label">
+			<Setter Property="Foreground" Value="#C4C4C4"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="FontSize" Value="16"/>
+		</Style>
+		<Style Selector="Label.Information">
+			<Setter Property="HorizontalAlignment" Value="Stretch"/>
+			<Setter Property="Margin" Value="0, 4, 0, 4"/>
+		</Style>
+	</Window.Styles>
+
+
+	<Border Background="#2E2E2E" BorderBrush="Black" BorderThickness="2" Padding="3" CornerRadius="8">
+		<!--Main Grid-->
+		<Grid Name="MainGrid" ShowGridLines="False" RowDefinitions="Auto, *, Auto">
+
+			<!--Functionality buttons-->
+			<Border Background="#404040" BorderBrush="#404040" BorderThickness="1" CornerRadius="8, 8, 0, 0">
+				<Grid Name="FunctionalityButtons" ShowGridLines="False" Grid.Row="0" ColumnDefinitions="Auto, *, Auto" Height="40">
+					<Button Name="fileButton" Grid.Column="0" Classes="topFunc" Content="File"
+							Command=""/>
+					<Label Grid.Column="1" Content="Signal Analizator"/>
+					<Button Name="settingsButton" Grid.Column="2" Classes="topFunc" Content="Settings"
+							Command=""/>
+				</Grid>
+			</Border>
+
+			<!--Information grid-->
+			<Border Grid.Row="1">
+				<Grid ShowGridLines="False" ColumnDefinitions="1*, 2*">
+					<!--Information about selected file-->
+					<Border Grid.Column="0" BorderBrush="#404040" BorderThickness="4, 0, 4, 4">
+						<Grid ShowGridLines="False" RowDefinitions="Auto, Auto, Auto, Auto, Auto, 5*">
+							<Label Grid.Row="0" Classes="Information" Content="Information from signal files:"/>
+							<Label Grid.Row="1" Classes="Information" Content="NameOfSignal"/>
+							<Label Grid.Row="2" Classes="Information" Content="TypeOfSignal"/>
+							<Label Grid.Row="3" Classes="Information" Content="UnicNumber"/>
+							<Label Grid.Row="4" Classes="Information" Content="EffectiveFd"/>
+
+							<Border Grid.Row="5" BorderThickness="0, 4, 0, 0" BorderBrush="#404040">
+								
+							</Border>
+						</Grid>
+					</Border>
+				</Grid>
+			</Border>
+
+		</Grid>
+	</Border>
 
 </Window>

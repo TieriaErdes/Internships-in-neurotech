@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BOSMeth xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TemplateGUID>00000000-0000-0000-0000-000000000000</TemplateGUID>
+  <Channels>
+    <Channel>
+      <UnicNumber>0</UnicNumber>
+      <SignalFileName>Signal0.bcf</SignalFileName>
+      <Type>1</Type>
+      <EffectiveFd>1000</EffectiveFd>
+    </Channel>
+    <Channel>
+      <UnicNumber>2</UnicNumber>
+      <SignalFileName>Signal2.bcf</SignalFileName>
+      <Type>3</Type>
+      <EffectiveFd>1000</EffectiveFd>
+    </Channel>
+    <Channel>
+      <UnicNumber>5</UnicNumber>
+      <SignalFileName>Signal5.bcf</SignalFileName>
+      <Type>3</Type>
+      <EffectiveFd>1000</EffectiveFd>
+    </Channel>
+    <Channel>
+      <UnicNumber>8</UnicNumber>
+      <SignalFileName>Signal8.bcf</SignalFileName>
+      <Type>3</Type>
+      <EffectiveFd>1000</EffectiveFd>
+    </Channel>
+  </Channels>
+</BOSMeth>

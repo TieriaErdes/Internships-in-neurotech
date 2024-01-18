@@ -1,0 +1,11 @@
+
+
+###
+temporary clipboard storage
+###
+
+
+<StackPanel>
+		<TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Name="ButtonToTestingSerializing" Command="{Binding TestSerializing}" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Test Serializing"/>
+	</StackPanel>

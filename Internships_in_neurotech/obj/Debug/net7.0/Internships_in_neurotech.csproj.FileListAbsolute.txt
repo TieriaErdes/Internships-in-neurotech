@@ -270,3 +270,4 @@ C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Intern
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.csproj.CopyComplete
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.genruntimeconfig.cache
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\ref\Internships_in_neurotech.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\CommunityToolkit.Mvvm.dll
