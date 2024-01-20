@@ -9,10 +9,10 @@ using System.Xml.Serialization;
 
 namespace Internships_in_neurotech.Models
 {
-    internal class SerializedChannel
+    public class SerializedChannel
     {
 
-        public BOSMeth? _bosMeth = new BOSMeth(Guid.Empty);
+        public BOSMeth? bosMeth = new BOSMeth(Guid.Empty);
 
         private XmlSerializer formatter = new XmlSerializer(typeof(BOSMeth));
 
@@ -22,7 +22,7 @@ namespace Internships_in_neurotech.Models
             {
             using (FileStream fileStream = new FileStream(fileName, FileMode.Open))
             {
-                BOSMeth? bosMeth = formatter.Deserialize(fileStream) as BOSMeth;
+                bosMeth = formatter.Deserialize(fileStream) as BOSMeth;
                 //var obj = formatter.Deserialize(fileStream);
 
                 if (bosMeth != null)
@@ -33,7 +33,7 @@ namespace Internships_in_neurotech.Models
 
         public void SerializeData(ref string _fileName)
         {
-            if (_bosMeth == null)
+            if (bosMeth == null)
             {
                 throw new Exception("It is impossible to serialize channels into an xml file. bosMeth equals to null");
             }
@@ -44,7 +44,7 @@ namespace Internships_in_neurotech.Models
             //using (FileStream fileStream = new FileStream("C:\\Users\\User\\Desktop\\Програмирование\\Learning Avalonia UI\\Internships-in-neurotech\\Internships_in_neurotech\\Models\\TestMethDescription.xml", FileMode.OpenOrCreate))
             using (FileStream fileStream = new FileStream(fileName, FileMode.OpenOrCreate))
             {
-                formatter.Serialize(fileStream, _bosMeth);
+                formatter.Serialize(fileStream, bosMeth);
             }
         }
 

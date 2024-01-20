@@ -20,26 +20,26 @@
 		<!--top button Styles-->
 		<Style Selector="Button.topFunc">
 			<Setter Property="Height" Value="32"/>
-			<Setter Property="Background" Value="#353535"/>
+			<Setter Property="Background" Value="{DynamicResource ResourceKey=ButtonColor}"/>
 			<Setter Property="FontSize" Value="14"/>
-			<Setter Property="Foreground" Value="#C4C4C4"/>
+			<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
 			<Setter Property="VerticalAlignment" Value="Center"/>
 			<Setter Property="Margin" Value="4, 0, 4, 0"/>
 		</Style>
 
 		<Style Selector="Button.topFunc:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-			<Setter Property="Background" Value="#303030"/>
-			<Setter Property="Foreground" Value="#C4C4C4"/>
+			<Setter Property="Background" Value="{DynamicResource ButtonPiontOverColor}"/>
+			<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
 		</Style>
 
 		<Style Selector="Button:pressed /template/ ContentPresenter#PART_ContentPresenter">
-			<Setter Property="Background" Value="#252525"/>
-			<Setter Property="Foreground" Value="#C4C4C4"/>
+			<Setter Property="Background" Value="{DynamicResource ButtonPressedColor}"/>
+			<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
 		</Style>
 
 		<!--Label styles-->
 		<Style Selector="Label">
-			<Setter Property="Foreground" Value="#C4C4C4"/>
+			<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
 			<Setter Property="VerticalAlignment" Value="Center"/>
 			<Setter Property="HorizontalAlignment" Value="Center"/>
 			<Setter Property="FontSize" Value="16"/>
@@ -48,18 +48,47 @@
 			<Setter Property="HorizontalAlignment" Value="Stretch"/>
 			<Setter Property="Margin" Value="0, 4, 0, 4"/>
 		</Style>
+		
+		<!--Flyout styles-->
+		<Style Selector="FlyoutPresenter.SignalsNames">
+			<Setter Property="Background" Value="{DynamicResource FlyoutBackgroundColor}"/>
+			<Setter Property="BorderBrush" Value="Black"/>
+			<Setter Property="BorderThickness" Value="1"/>
+		</Style>
+		
 	</Window.Styles>
 
 
-	<Border Background="#2E2E2E" BorderBrush="Black" BorderThickness="2" Padding="3" CornerRadius="8">
+	<Border Background="{DynamicResource ResourceKey=MainBackgroundColor}" BorderBrush="Black" BorderThickness="2" Padding="3" CornerRadius="8">
 		<!--Main Grid-->
 		<Grid Name="MainGrid" ShowGridLines="False" RowDefinitions="Auto, *, Auto">
 
 			<!--Functionality buttons-->
-			<Border Background="#404040" BorderBrush="#404040" BorderThickness="1" CornerRadius="8, 8, 0, 0">
+			<Border Background="{DynamicResource SecondaryBackgroundColor}" BorderBrush="{DynamicResource SecondaryBackgroundColor}" BorderThickness="1" 
+					CornerRadius="8, 8, 0, 0" BoxShadow="inset 0 2 7 1 DarkOrchid">
 				<Grid Name="FunctionalityButtons" ShowGridLines="False" Grid.Row="0" ColumnDefinitions="Auto, *, Auto" Height="40">
-					<Button Name="fileButton" Grid.Column="0" Classes="topFunc" Content="File"
-							Command=""/>
+					<Button Name="fileButton" Grid.Column="0" Classes="topFunc" Content="File" Margin="8, 0, 0, 0">
+						<Button.Flyout>
+							<Flyout FlyoutPresenterClasses="SignalsNames" Placement="BottomEdgeAlignedLeft">
+								<StackPanel Background="{DynamicResource FlyoutBackgroundColor}">
+									<Label Content="Names of signals:"/>
+									<ListBox SelectionMode="Single"
+											 x:Name="SignalsPopupListBox"
+											 ItemsSource="{Binding ChannelNames}" Background="Transparent"
+											 SelectionChanged="ListBox_SelectionChanged">	
+										<ListBox.ItemTemplate>
+											<DataTemplate>
+												<Border BorderBrush="{DynamicResource SecondaryBackgroundColor}" BorderThickness="1"
+														CornerRadius="8" Padding="5">
+													<Label Content="{Binding}"/>
+												</Border>
+											</DataTemplate>
+										</ListBox.ItemTemplate>
+									</ListBox>
+								</StackPanel>
+							</Flyout>
+						</Button.Flyout>
+					</Button>
 					<Label Grid.Column="1" Content="Signal Analizator"/>
 					<Button Name="settingsButton" Grid.Column="2" Classes="topFunc" Content="Settings"
 							Command=""/>
@@ -67,21 +96,29 @@
 			</Border>
 
 			<!--Information grid-->
-			<Border Grid.Row="1">
+			<Border Grid.Row="1" BoxShadow="inset 0 1 25 1 DarkOrchid">
 				<Grid ShowGridLines="False" ColumnDefinitions="1*, 2*">
 					<!--Information about selected file-->
-					<Border Grid.Column="0" BorderBrush="#404040" BorderThickness="4, 0, 4, 4">
+					<Border Grid.Column="0" BorderBrush="{DynamicResource SecondaryBackgroundColor}" BorderThickness="4, 0, 4, 4"
+							>
 						<Grid ShowGridLines="False" RowDefinitions="Auto, Auto, Auto, Auto, Auto, 5*">
 							<Label Grid.Row="0" Classes="Information" Content="Information from signal files:"/>
-							<Label Grid.Row="1" Classes="Information" Content="NameOfSignal"/>
-							<Label Grid.Row="2" Classes="Information" Content="TypeOfSignal"/>
-							<Label Grid.Row="3" Classes="Information" Content="UnicNumber"/>
-							<Label Grid.Row="4" Classes="Information" Content="EffectiveFd"/>
+							<Label Grid.Row="1" Classes="Information" Name="NameOfSignal" Content="{Binding InformationNameOfSignal}"/>
+							<Label Grid.Row="2" Classes="Information" Name="TypeOfSignal" Content="{Binding InformationTypeOfSignal}"/>
+							<Label Grid.Row="3" Classes="Information" Name="UnicNumber" Content="{Binding InformationUnicNumberOfSignal}"/>
+							<Label Grid.Row="4" Classes="Information" Name="EffectiveFd" Content="{Binding InformationEffectiveFdOfSignal}"/>
 
-							<Border Grid.Row="5" BorderThickness="0, 4, 0, 0" BorderBrush="#404040">
+							<Border Grid.Row="5" BorderThickness="0, 4, 0, 0" BorderBrush="{DynamicResource SecondaryBackgroundColor}"
+									BoxShadow="inset 0 150 15 -2 DarkOrchid">
 								
 							</Border>
 						</Grid>
+					</Border>
+	
+					
+					<!--Graphic map-->
+					<Border Grid.Column="1" BorderBrush="{DynamicResource SecondaryBackgroundColor}" BorderThickness="0, 0, 4, 4">
+						
 					</Border>
 				</Grid>
 			</Border>

@@ -72,6 +72,10 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.2, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[4.0.1, )"
             }
           },
           "imports": [

@@ -163,6 +163,7 @@ C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Intern
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Themes.Simple.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Win32.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.X11.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\CommunityToolkit.Mvvm.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\DynamicData.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\HarfBuzzSharp.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\MicroCom.Runtime.dll
@@ -270,4 +271,5 @@ C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Intern
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.csproj.CopyComplete
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.genruntimeconfig.cache
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\ref\Internships_in_neurotech.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\CommunityToolkit.Mvvm.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\nunit.framework.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\nunit.framework.legacy.dll
