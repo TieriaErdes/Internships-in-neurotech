@@ -81,6 +81,10 @@
               "target": "Package",
               "version": "[4.0.1, )"
             },
+            "ResXResourceReader.NetStandard": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
             "Resx": {
               "target": "Package",
               "version": "[0.2.1, )"

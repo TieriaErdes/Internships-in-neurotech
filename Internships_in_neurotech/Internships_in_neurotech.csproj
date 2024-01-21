@@ -25,10 +25,26 @@
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
     <PackageReference Include="NUnit" Version="4.0.1" />
     <PackageReference Include="Resx" Version="0.2.1" />
+    <PackageReference Include="ResXResourceReader.NetStandard" Version="1.2.0" />
   </ItemGroup>
-
-
+  
   <ItemGroup>
-    <Folder Include="Lang\" />
-  </ItemGroup>
+      <EmbeddedResource Update="Lang\Resources.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Assets\Resources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Resources.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Lang\Resources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Resources.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
 </Project>
