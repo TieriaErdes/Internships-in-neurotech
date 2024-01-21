@@ -92,6 +92,8 @@ namespace Internships_in_neurotech.ViewModels
             InformationEffectiveFdOfSignal = "EffectiveFd: " + channel.EffectiveFd.ToString();
 
             LatestSelectedSignal = channel;
+
+
         }
     }
 }

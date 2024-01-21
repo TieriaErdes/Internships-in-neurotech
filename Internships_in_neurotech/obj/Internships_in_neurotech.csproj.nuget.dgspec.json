@@ -47,27 +47,31 @@
           "dependencies": {
             "Avalonia": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "[11.0.7, )"
             },
             "Avalonia.Desktop": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "[11.0.7, )"
             },
             "Avalonia.Diagnostics": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "[11.0.7, )"
             },
             "Avalonia.Fonts.Inter": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "[11.0.7, )"
             },
             "Avalonia.ReactiveUI": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "[11.0.7, )"
+            },
+            "Avalonia.Svg.Skia": {
+              "target": "Package",
+              "version": "[11.0.0.10, )"
             },
             "Avalonia.Themes.Fluent": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "[11.0.7, )"
             },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
@@ -76,6 +80,10 @@
             "NUnit": {
               "target": "Package",
               "version": "[4.0.1, )"
+            },
+            "Resx": {
+              "target": "Package",
+              "version": "[0.2.1, )"
             }
           },
           "imports": [

@@ -3,6 +3,8 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using Internships_in_neurotech.ViewModels;
 using Internships_in_neurotech.Views;
+using System.Globalization;
+
 
 namespace Internships_in_neurotech
 {
@@ -15,6 +17,8 @@ namespace Internships_in_neurotech
 
         public override void OnFrameworkInitializationCompleted()
         {
+            Lang.Resources.Culture = new CultureInfo("fil-PH");
+
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
                 desktop.MainWindow = new MainWindow

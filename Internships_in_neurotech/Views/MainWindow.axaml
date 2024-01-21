@@ -3,6 +3,7 @@
         xmlns:vm="using:Internships_in_neurotech.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:skp="clr-namespace:Avalonia.Controls.Skia;assembly=Avalonia.Controls.Skia"
 		xmlns:controls="clr-namespace:Internships_in_neurotech"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Internships_in_neurotech.Views.MainWindow"
@@ -18,7 +19,7 @@
 
 	<Window.Styles>
 		<!--top button Styles-->
-		<Style Selector="Button.topFunc">
+		<Style Selector="Button">
 			<Setter Property="Height" Value="32"/>
 			<Setter Property="Background" Value="{DynamicResource ResourceKey=ButtonColor}"/>
 			<Setter Property="FontSize" Value="14"/>
@@ -27,14 +28,24 @@
 			<Setter Property="Margin" Value="4, 0, 4, 0"/>
 		</Style>
 
-		<Style Selector="Button.topFunc:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-			<Setter Property="Background" Value="{DynamicResource ButtonPiontOverColor}"/>
-			<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
-		</Style>
-
 		<Style Selector="Button:pressed /template/ ContentPresenter#PART_ContentPresenter">
 			<Setter Property="Background" Value="{DynamicResource ButtonPressedColor}"/>
 			<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+		</Style>
+
+		<Style Selector="Button /template/ ContentPresenter">
+			<Setter Property="Transitions">
+				<Transitions>
+					<TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.15"/>
+				</Transitions>
+			</Setter>
+		</Style>
+		<Style Selector="Button:pointerover /template/ ContentPresenter">
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+			<Setter Property="RenderTransform" Value="scale(1.11)"/>
+			<Setter Property="Opacity" Value="0.6"/>
+			<!-- not working with svg TODO: to correct this problem-->
 		</Style>
 
 		<!--Label styles-->
@@ -55,6 +66,7 @@
 			<Setter Property="BorderBrush" Value="Black"/>
 			<Setter Property="BorderThickness" Value="1"/>
 		</Style>
+
 		
 	</Window.Styles>
 
@@ -66,8 +78,10 @@
 			<!--Functionality buttons-->
 			<Border Background="{DynamicResource SecondaryBackgroundColor}" BorderBrush="{DynamicResource SecondaryBackgroundColor}" BorderThickness="1" 
 					CornerRadius="8, 8, 0, 0" BoxShadow="inset 0 2 7 1 DarkOrchid">
-				<Grid Name="FunctionalityButtons" ShowGridLines="False" Grid.Row="0" ColumnDefinitions="Auto, *, Auto" Height="40">
-					<Button Name="fileButton" Grid.Column="0" Classes="topFunc" Content="File" Margin="8, 0, 0, 0">
+				<Grid Name="FunctionalityButtons" ShowGridLines="False" Grid.Row="0" ColumnDefinitions="Auto, *, Auto" Height="45">
+					
+					<Button Name="fileButton" Grid.Column="0" Content="File" Margin="8, 0, 0, 0">
+						<Image Source="/Assets/icons8-graph-report-64.png" Height="23"/>
 						<Button.Flyout>
 							<Flyout FlyoutPresenterClasses="SignalsNames" Placement="BottomEdgeAlignedLeft">
 								<StackPanel Background="{DynamicResource FlyoutBackgroundColor}">
@@ -89,9 +103,22 @@
 							</Flyout>
 						</Button.Flyout>
 					</Button>
+					
+					<!--Title-->
 					<Label Grid.Column="1" Content="Signal Analizator"/>
-					<Button Name="settingsButton" Grid.Column="2" Classes="topFunc" Content="Settings"
-							Command=""/>
+					
+					<Button Name="settingsButton" Grid.Column="2" Content="Settings"
+							Command="" Margin="0, 0, 10, 0">
+						<Image Source="{SvgImage /Assets/icons8-settings.svg}" Height="23"/>
+						<Button.Flyout>
+							<Flyout FlyoutPresenterClasses="SignalsNames" Placement="BottomEdgeAlignedRight">
+								<StackPanel>
+									<Label Content="Settings panel"/>
+								</StackPanel>
+							</Flyout>
+						</Button.Flyout>
+					</Button>
+
 				</Grid>
 			</Border>
 
