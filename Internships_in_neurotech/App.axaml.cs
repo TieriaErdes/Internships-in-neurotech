@@ -17,7 +17,7 @@ namespace Internships_in_neurotech
 
         public override void OnFrameworkInitializationCompleted()
         {
-            Lang.Resources.Culture = new CultureInfo("fil-PH");
+            Lang.Resources.Culture = new CultureInfo("ru-Ru");
 
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {

@@ -36,7 +36,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="Assets\Resources.Designer.cs">
+      <Compile Update="Lang\Resources.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>Resources.resx</DependentUpon>

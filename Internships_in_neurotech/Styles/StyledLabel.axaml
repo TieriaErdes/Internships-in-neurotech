@@ -1,0 +1,26 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Design.PreviewWith>
+    <Border Padding="50" Background="{DynamicResource SecondaryBackgroundColor}">
+      <!-- Add Controls for Previewer Here -->
+		<StackPanel>
+			<Label Content="Test Label"/>
+			<Label Classes="Information" Content="Test information label"/>
+		</StackPanel>
+    </Border>
+  </Design.PreviewWith>
+
+  <!-- Add Styles Here -->
+	<Style Selector="Label">
+		<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="FontSize" Value="16"/>
+	</Style>
+	
+	<Style Selector="Label.Information">
+		<Setter Property="HorizontalAlignment" Value="Stretch"/>
+		<Setter Property="Margin" Value="0, 4, 0, 4"/>
+	</Style>
+	
+</Styles>

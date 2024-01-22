@@ -4,8 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:skp="clr-namespace:Avalonia.Controls.Skia;assembly=Avalonia.Controls.Skia"
+		xmlns:lang="clr-namespace:Internships_in_neurotech.Lang"
 		xmlns:controls="clr-namespace:Internships_in_neurotech"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="500"
+		Width="900" Height="500"
         x:Class="Internships_in_neurotech.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
@@ -18,47 +20,6 @@
 	</Design.DataContext>
 
 	<Window.Styles>
-		<!--top button Styles-->
-		<Style Selector="Button">
-			<Setter Property="Height" Value="32"/>
-			<Setter Property="Background" Value="{DynamicResource ResourceKey=ButtonColor}"/>
-			<Setter Property="FontSize" Value="14"/>
-			<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
-			<Setter Property="VerticalAlignment" Value="Center"/>
-			<Setter Property="Margin" Value="4, 0, 4, 0"/>
-		</Style>
-
-		<Style Selector="Button:pressed /template/ ContentPresenter#PART_ContentPresenter">
-			<Setter Property="Background" Value="{DynamicResource ButtonPressedColor}"/>
-			<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
-		</Style>
-
-		<Style Selector="Button /template/ ContentPresenter">
-			<Setter Property="Transitions">
-				<Transitions>
-					<TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.15"/>
-				</Transitions>
-			</Setter>
-		</Style>
-		<Style Selector="Button:pointerover /template/ ContentPresenter">
-			<Setter Property="Background" Value="Transparent"/>
-			<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
-			<Setter Property="RenderTransform" Value="scale(1.11)"/>
-			<Setter Property="Opacity" Value="0.6"/>
-			<!-- not working with svg TODO: to correct this problem-->
-		</Style>
-
-		<!--Label styles-->
-		<Style Selector="Label">
-			<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
-			<Setter Property="VerticalAlignment" Value="Center"/>
-			<Setter Property="HorizontalAlignment" Value="Center"/>
-			<Setter Property="FontSize" Value="16"/>
-		</Style>
-		<Style Selector="Label.Information">
-			<Setter Property="HorizontalAlignment" Value="Stretch"/>
-			<Setter Property="Margin" Value="0, 4, 0, 4"/>
-		</Style>
 		
 		<!--Flyout styles-->
 		<Style Selector="FlyoutPresenter.SignalsNames">
@@ -66,7 +27,9 @@
 			<Setter Property="BorderBrush" Value="Black"/>
 			<Setter Property="BorderThickness" Value="1"/>
 		</Style>
-
+		
+		<StyleInclude Source="/Styles/StyledButton.axaml"/>
+		<StyleInclude Source="/Styles/StyledLabel.axaml"/>
 		
 	</Window.Styles>
 
@@ -79,20 +42,21 @@
 			<Border Background="{DynamicResource SecondaryBackgroundColor}" BorderBrush="{DynamicResource SecondaryBackgroundColor}" BorderThickness="1" 
 					CornerRadius="8, 8, 0, 0" BoxShadow="inset 0 2 7 1 DarkOrchid">
 				<Grid Name="FunctionalityButtons" ShowGridLines="False" Grid.Row="0" ColumnDefinitions="Auto, *, Auto" Height="45">
-					
+				
+					<!--button of popup list of signals names-->
 					<Button Name="fileButton" Grid.Column="0" Content="File" Margin="8, 0, 0, 0">
 						<Image Source="/Assets/icons8-graph-report-64.png" Height="23"/>
 						<Button.Flyout>
 							<Flyout FlyoutPresenterClasses="SignalsNames" Placement="BottomEdgeAlignedLeft">
 								<StackPanel Background="{DynamicResource FlyoutBackgroundColor}">
-									<Label Content="Names of signals:"/>
+									<Label Content="{x:Static lang:Resources.NamesOfSignals}"/>
 									<ListBox SelectionMode="Single"
 											 x:Name="SignalsPopupListBox"
 											 ItemsSource="{Binding ChannelNames}" Background="Transparent"
 											 SelectionChanged="ListBox_SelectionChanged">	
 										<ListBox.ItemTemplate>
 											<DataTemplate>
-												<Border BorderBrush="{DynamicResource SecondaryBackgroundColor}" BorderThickness="1"
+												<Border BorderBrush="{DynamicResource TextColor}" BorderThickness="2"
 														CornerRadius="8" Padding="5">
 													<Label Content="{Binding}"/>
 												</Border>
@@ -105,16 +69,29 @@
 					</Button>
 					
 					<!--Title-->
-					<Label Grid.Column="1" Content="Signal Analizator"/>
+					<Label Grid.Column="1" Content="{x:Static lang:Resources.SignalsAnalizator}"/>
 					
-					<Button Name="settingsButton" Grid.Column="2" Content="Settings"
+					<!--Button popup of settings pannel with choosing languages-->
+					<Button Name="settingsButton" Grid.Column="2" Content=""
 							Command="" Margin="0, 0, 10, 0">
 						<Image Source="{SvgImage /Assets/icons8-settings.svg}" Height="23"/>
 						<Button.Flyout>
 							<Flyout FlyoutPresenterClasses="SignalsNames" Placement="BottomEdgeAlignedRight">
-								<StackPanel>
-									<Label Content="Settings panel"/>
-								</StackPanel>
+								<Grid ShowGridLines="True" RowDefinitions="Auto, Auto">
+									<Label Grid.Row="0" Content="{x:Static lang:Resources.Settings}"/>
+									<Grid Grid.Row="1"  ColumnDefinitions="Auto, Auto">
+										<Label Grid.Column="0" Content="{x:Static lang:Resources.Choosinglanguage}"/>
+										<Button Grid.Column="1" Content=">">
+											<Button.Flyout>
+												<Flyout>
+													<!---->
+													<!---->
+													<!---->
+												</Flyout>
+											</Button.Flyout>
+										</Button>
+									</Grid>
+								</Grid>
 							</Flyout>
 						</Button.Flyout>
 					</Button>
@@ -129,7 +106,7 @@
 					<Border Grid.Column="0" BorderBrush="{DynamicResource SecondaryBackgroundColor}" BorderThickness="4, 0, 4, 4"
 							>
 						<Grid ShowGridLines="False" RowDefinitions="Auto, Auto, Auto, Auto, Auto, 5*">
-							<Label Grid.Row="0" Classes="Information" Content="Information from signal files:"/>
+							<Label Grid.Row="0" Classes="Information" Content="{x:Static lang:Resources.InformationTitleText}" FontSize="16"/>
 							<Label Grid.Row="1" Classes="Information" Name="NameOfSignal" Content="{Binding InformationNameOfSignal}"/>
 							<Label Grid.Row="2" Classes="Information" Name="TypeOfSignal" Content="{Binding InformationTypeOfSignal}"/>
 							<Label Grid.Row="3" Classes="Information" Name="UnicNumber" Content="{Binding InformationUnicNumberOfSignal}"/>
@@ -137,7 +114,7 @@
 
 							<Border Grid.Row="5" BorderThickness="0, 4, 0, 0" BorderBrush="{DynamicResource SecondaryBackgroundColor}"
 									BoxShadow="inset 0 150 15 -2 DarkOrchid">
-								
+
 							</Border>
 						</Grid>
 					</Border>

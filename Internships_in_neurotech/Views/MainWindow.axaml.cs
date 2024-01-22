@@ -11,13 +11,13 @@ namespace Internships_in_neurotech.Views
     public partial class MainWindow : Window
     {
 
-        IList selectedItem;
-
         public MainWindow()
         {
             InitializeComponent();
 
             //SignalsPopupListBox.SelectedItem.BindCommand(((MainWindowViewModel)DataContext).UpdateUISignalsInfo);
+
+
         }
 
         private void ListBox_SelectionChanged(object? sender, Avalonia.Controls.SelectionChangedEventArgs e)

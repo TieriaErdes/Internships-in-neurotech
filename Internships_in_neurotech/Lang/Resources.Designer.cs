@@ -61,11 +61,56 @@ namespace Internships_in_neurotech.Lang {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Choosinglanguage.
+        /// </summary>
+        public static string Choosinglanguage {
+            get {
+                return ResourceManager.GetString("Choosinglanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Good Day!.
         /// </summary>
         public static string GreetingText {
             get {
                 return ResourceManager.GetString("GreetingText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Информация из файлов сигналов:.
+        /// </summary>
+        public static string InformationTitleText {
+            get {
+                return ResourceManager.GetString("InformationTitleText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Названия сигналов: ss.
+        /// </summary>
+        public static string NamesOfSignals {
+            get {
+                return ResourceManager.GetString("NamesOfSignals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Настройки:.
+        /// </summary>
+        public static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Анализатор Сигналов.
+        /// </summary>
+        public static string SignalsAnalizator {
+            get {
+                return ResourceManager.GetString("SignalsAnalizator", resourceCulture);
             }
         }
     }

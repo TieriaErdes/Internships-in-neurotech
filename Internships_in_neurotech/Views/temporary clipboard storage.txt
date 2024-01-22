@@ -9,3 +9,54 @@ temporary clipboard storage
 		<TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Button Name="ButtonToTestingSerializing" Command="{Binding TestSerializing}" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Test Serializing"/>
 	</StackPanel>
+
+	<!--top button Styles-->
+		<Style Selector="Button">
+			<Setter Property="Height" Value="32"/>
+			<Setter Property="Background" Value="{DynamicResource ResourceKey=ButtonColor}"/>
+			<Setter Property="FontSize" Value="14"/>
+			<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+			<Setter Property="Margin" Value="4, 0, 4, 0"/>
+		</Style>
+
+		<Style Selector="Button:pressed /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background" Value="{DynamicResource ButtonPressedColor}"/>
+			<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+		</Style>
+
+		<Style Selector="Button /template/ ContentPresenter">
+			<Setter Property="Transitions">
+				<Transitions>
+					<TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.15"/>
+				</Transitions>
+			</Setter>
+		</Style>
+		<Style Selector="Button:pointerover /template/ ContentPresenter">
+			<Setter Property="Background" Value="{DynamicResource ButtonPointOverColor}"/>
+			<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+			<Setter Property="RenderTransform" Value="scale(1.11)"/>
+			<Setter Property="Opacity" Value="0.6"/>
+			<!-- not working with svg TODO: to correct this problem-->
+		</Style>
+
+
+		
+		<!--Label styles-->
+		<Style Selector="Label">
+			<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="FontSize" Value="16"/>
+		</Style>
+		<Style Selector="Label.Information">
+			<Setter Property="HorizontalAlignment" Value="Stretch"/>
+			<Setter Property="Margin" Value="0, 4, 0, 4"/>
+		</Style>
+		
+		<!--Flyout styles-->
+		<Style Selector="FlyoutPresenter.SignalsNames">
+			<Setter Property="Background" Value="{DynamicResource FlyoutBackgroundColor}"/>
+			<Setter Property="BorderBrush" Value="Black"/>
+			<Setter Property="BorderThickness" Value="1"/>
+		</Style>

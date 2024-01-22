@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Globalization;
 
 namespace Internships_in_neurotech.ViewModels
 {
@@ -72,6 +73,11 @@ namespace Internships_in_neurotech.ViewModels
 
         }
 
+        public void SetDefaultInformationText()
+        {
+
+        }
+
         [RelayCommand]
         public void UpdateUISignalsInfo(object? selectedItemName)
         {
@@ -86,10 +92,20 @@ namespace Internships_in_neurotech.ViewModels
 
         public void InsertValuesToTheSignalInfo(Channel? channel)
         {
-            InformationNameOfSignal = "Name: " + channel.SignalFileName;
-            InformationTypeOfSignal = "Type: " + channel.Type.ToString();
-            InformationUnicNumberOfSignal = "UnicNum: " + channel.UnicNumber.ToString();
-            InformationEffectiveFdOfSignal = "EffectiveFd: " + channel.EffectiveFd.ToString();
+            if (CultureInfo.CurrentCulture.Name == "ru-RU")
+            {
+                InformationNameOfSignal = "Название: " + channel.SignalFileName;
+                InformationTypeOfSignal = "Тип: " + channel.Type.ToString();
+                InformationUnicNumberOfSignal = "UnicNum: " + channel.UnicNumber.ToString();
+                InformationEffectiveFdOfSignal = "EffectiveFd: " + channel.EffectiveFd.ToString();
+            }
+            else // для всех остальных языков английская локализация
+            {
+                InformationNameOfSignal = "Name: " + channel.SignalFileName;
+                InformationTypeOfSignal = "Type: " + channel.Type.ToString();
+                InformationUnicNumberOfSignal = "UnicNum: " + channel.UnicNumber.ToString();
+                InformationEffectiveFdOfSignal = "EffectiveFd: " + channel.EffectiveFd.ToString();
+            }
 
             LatestSelectedSignal = channel;
 

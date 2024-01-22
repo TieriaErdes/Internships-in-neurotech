@@ -18,5 +18,11 @@ build_property.ProjectDir = C:\Users\User\Desktop\Програмирование
 [C:/Users/User/Desktop/Програмирование/Learning Avalonia UI/Internships-in-neurotech/Internships_in_neurotech/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/User/Desktop/Програмирование/Learning Avalonia UI/Internships-in-neurotech/Internships_in_neurotech/Styles/StyledButton.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/User/Desktop/Програмирование/Learning Avalonia UI/Internships-in-neurotech/Internships_in_neurotech/Styles/StyledLabel.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/User/Desktop/Програмирование/Learning Avalonia UI/Internships-in-neurotech/Internships_in_neurotech/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

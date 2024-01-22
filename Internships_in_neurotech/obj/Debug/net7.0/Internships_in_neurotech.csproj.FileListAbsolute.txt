@@ -139,8 +139,7 @@ C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Intern
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Internships_in_neurotech.runtimeconfig.json
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Internships_in_neurotech.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Internships_in_neurotech.pdb
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\fil-PH\Internships_in_neurotech.resources.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ja-JP\Internships_in_neurotech.resources.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ru-RU\Internships_in_neurotech.resources.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Base.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Controls.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.DesignerSupport.dll
@@ -270,9 +269,9 @@ C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Intern
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.csproj.AssemblyReference.cache
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Avalonia\Resources.Inputs.cache
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Avalonia\resources
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.Lang.Resources.jp-JP.resources
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.Lang.Resources.resources
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.Lang.Resources.fil-PH.resources
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.Lang.Resources.ja-JP.resources
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.Lang.Resources.ru-RU.resources
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.csproj.GenerateResource.cache
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.AssemblyInfoInputs.cache
@@ -285,8 +284,8 @@ C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Intern
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\refint\Internships_in_neurotech.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.pdb
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\fil-PH\Internships_in_neurotech.resources.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\ja-JP\Internships_in_neurotech.resources.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\ru-RU\Internships_in_neurotech.resources.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.csproj.CopyComplete
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.genruntimeconfig.cache
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\ref\Internships_in_neurotech.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.Lang.Resources.en-En.resources

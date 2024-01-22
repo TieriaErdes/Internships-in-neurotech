@@ -24,11 +24,8 @@
           "Internships_in_neurotech.dll": {}
         },
         "resources": {
-          "fil-PH/Internships_in_neurotech.resources.dll": {
-            "locale": "fil-PH"
-          },
-          "ja-JP/Internships_in_neurotech.resources.dll": {
-            "locale": "ja-JP"
+          "ru-RU/Internships_in_neurotech.resources.dll": {
+            "locale": "ru-RU"
           }
         }
       },

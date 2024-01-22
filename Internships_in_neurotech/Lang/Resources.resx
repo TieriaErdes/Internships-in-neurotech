@@ -117,7 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Choosinglanguage" xml:space="preserve">
+    <value>Choosinglanguage</value>
+  </data>
   <data name="GreetingText" xml:space="preserve">
     <value>Good Day!</value>
+  </data>
+  <data name="InformationTitleText" xml:space="preserve">
+    <value>Информация из файлов сигналов:</value>
+  </data>
+  <data name="NamesOfSignals" xml:space="preserve">
+    <value>Названия сигналов: ss</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Настройки:</value>
+  </data>
+  <data name="SignalsAnalizator" xml:space="preserve">
+    <value>Анализатор Сигналов</value>
+    <comment>title</comment>
   </data>
 </root>

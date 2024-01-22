@@ -1,0 +1,42 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Design.PreviewWith>
+    <Border Padding="50" Background="{DynamicResource SecondaryBackgroundColor}">
+      <!-- Add Controls for Previewer Here -->
+		<Button Content="TestButton"/>
+		
+    </Border>
+  </Design.PreviewWith>
+
+  <!-- Add Styles Here -->
+	<Style Selector="Button /template/ ContentPresenter">
+		<Setter Property="Height" Value="32"/>
+		<Setter Property="Background" Value="{DynamicResource ResourceKey=ButtonColor}"/>
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Margin" Value="4, 0, 4, 0"/>
+		<Setter Property="Transitions">
+			<Transitions>
+				<TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.15"/>
+			</Transitions>
+		</Setter>
+	</Style>
+
+	<Style Selector="Button:pressed /template/ ContentPresenter#PART_ContentPresenter">
+		<Setter Property="Background" Value="{DynamicResource ButtonPressedColor}"/>
+		<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+	</Style>
+
+	<Style Selector="Button /template/ ContentPresenter">
+		
+	</Style>
+	<Style Selector="Button:pointerover /template/ ContentPresenter">
+		<Setter Property="Background" Value="{DynamicResource ButtonPointOverColor}"/>
+		<Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+		<Setter Property="RenderTransform" Value="scale(1.11)"/>
+		<Setter Property="Opacity" Value="0.6"/>
+		<!-- not working with svg TODO: to correct this problem-->
+	</Style>
+	
+</Styles>
