@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:skp="clr-namespace:Avalonia.Controls.Skia;assembly=Avalonia.Controls.Skia"
 		xmlns:lang="clr-namespace:Internships_in_neurotech.Lang"
+		xmlns:lvc="using:LiveChartsCore.SkiaSharpView.Avalonia"
+        xmlns:vms="using:ViewModelsSamples.Lines.Basic"
 		xmlns:controls="clr-namespace:Internships_in_neurotech"
-        mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="500"
-		Width="900" Height="500"
+        mc:Ignorable="d" d:DesignWidth="1700" d:DesignHeight="650"
+		Width="1700" Height="650"
         x:Class="Internships_in_neurotech.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
@@ -87,6 +89,8 @@
 													<!---->
 													<!---->
 													<!---->
+													<!---->
+													<!---->
 												</Flyout>
 											</Button.Flyout>
 										</Button>
@@ -101,7 +105,7 @@
 
 			<!--Information grid-->
 			<Border Grid.Row="1" BoxShadow="inset 0 1 25 1 DarkOrchid">
-				<Grid ShowGridLines="False" ColumnDefinitions="1*, 2*">
+				<Grid ShowGridLines="False" ColumnDefinitions="Auto, 2*">
 					<!--Information about selected file-->
 					<Border Grid.Column="0" BorderBrush="{DynamicResource SecondaryBackgroundColor}" BorderThickness="4, 0, 4, 4"
 							>
@@ -122,7 +126,12 @@
 					
 					<!--Graphic map-->
 					<Border Grid.Column="1" BorderBrush="{DynamicResource SecondaryBackgroundColor}" BorderThickness="0, 0, 4, 4">
-						
+						<lvc:CartesianChart
+							Series="{Binding Series}"
+							Title="{Binding Title}"
+							XAxes="{Binding XAxes}"
+							YAxes="{Binding YAxes}">
+						</lvc:CartesianChart>
 					</Border>
 				</Grid>
 			</Border>

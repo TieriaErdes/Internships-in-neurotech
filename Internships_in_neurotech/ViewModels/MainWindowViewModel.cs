@@ -2,12 +2,20 @@
 using CommunityToolkit.Mvvm.Input;
 using DynamicData;
 using Internships_in_neurotech.Models;
+using LiveChartsCore.SkiaSharpView.VisualElements;
+using LiveChartsCore.SkiaSharpView.Painting;
+using LiveChartsCore.SkiaSharpView;
+using LiveChartsCore;
+using SkiaSharp;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Globalization;
+using Avalonia.Media;
+using LiveChartsCore.Defaults;
+using LiveChartsCore.SkiaSharpView.Painting.Effects;
 
 namespace Internships_in_neurotech.ViewModels
 {
@@ -36,9 +44,14 @@ namespace Internships_in_neurotech.ViewModels
 
         #endregion
 
+
         public SerializedChannel Channels;
 
         
+        private Signal? currentSignal;
+        private ObservableCollection<ObservableValue>? _ChartValues;
+        public ObservableCollection<ISeries> Series { get; set; }
+
 
         private ObservableCollection<string>? _channelNames;
         public ObservableCollection<string> ChannelNames
@@ -61,17 +74,82 @@ namespace Internships_in_neurotech.ViewModels
             {
                 ChannelNames.Add(channel.SignalFileName);
             }
+
+
+            CreatingChart();
         }
 
 
-        //private 
-        [RelayCommand]
-        public void TestSerializing()
+        #region Chart configuration
+
+        private void CreatingChart()
         {
-            //SerializedChannel Channels = new SerializedChannel();
+            currentSignal = new Signal(in Channels);
+            _ChartValues = new ObservableCollection<ObservableValue>();
 
+            foreach (var item in currentSignal.DataFromFile[0])
+            {
+                _ChartValues.Add(new(item));
+            }
 
+            Series = new ObservableCollection<ISeries>
+            {
+                new LineSeries<ObservableValue>
+                {
+                    Values = _ChartValues,
+                    GeometrySize = 0,
+                    GeometryStroke = null,
+                    Stroke = new SolidColorPaint(SKColors.Silver) { StrokeThickness = 2},
+                    Fill = null
+                }
+            };
         }
+
+            public Axis[] XAxes { get; set; }
+            = new Axis[]
+            {
+                new Axis
+                {
+                    Name = "X Axis",
+                    NamePaint = new SolidColorPaint(SKColors.Black),
+
+                    LabelsPaint = new SolidColorPaint(SKColors.Silver),
+                    TextSize = 12,
+
+                }
+            };
+
+        public Axis[] YAxes { get; set; }
+            = new Axis[]
+            {
+                new Axis
+                {
+                    Name = "Y Axis",
+                    NamePaint = new SolidColorPaint(SKColors.Silver),
+
+                    LabelsPaint = new SolidColorPaint(SKColors.Silver),
+                    TextSize = 14,
+
+                    SeparatorsPaint = new SolidColorPaint(SKColors.LightSlateGray)
+                    {
+                        StrokeThickness = 2,
+                        PathEffect = new DashEffect(new float[] { 8, 12})
+                    }
+                }
+            };
+
+        public LabelVisual Title { get; set; } =
+            new LabelVisual
+            {
+                Text = "My chart title",
+                TextSize = 25,
+                Padding = new LiveChartsCore.Drawing.Padding(15),
+                Paint = new SolidColorPaint(SKColors.Silver)
+            };
+
+        #endregion
+
+
 
         public void SetDefaultInformationText()
         {
@@ -111,5 +189,7 @@ namespace Internships_in_neurotech.ViewModels
 
 
         }
+
+        
     }
 }

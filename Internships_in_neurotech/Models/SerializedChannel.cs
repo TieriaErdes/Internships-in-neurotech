@@ -16,6 +16,7 @@ namespace Internships_in_neurotech.Models
 
         private XmlSerializer formatter = new XmlSerializer(typeof(BOSMeth));
 
+        public string FilePath = @"C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\Models\";
         private string fileName = "C:\\Users\\User\\Desktop\\Програмирование\\Learning Avalonia UI\\Internships-in-neurotech\\Internships_in_neurotech\\Models\\MethDescription.xml";
 
         private void DeserializeData()
