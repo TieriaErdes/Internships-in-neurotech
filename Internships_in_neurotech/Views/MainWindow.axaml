@@ -22,17 +22,17 @@
 	</Design.DataContext>
 
 	<Window.Styles>
-		
+
 		<!--Flyout styles-->
 		<Style Selector="FlyoutPresenter.SignalsNames">
 			<Setter Property="Background" Value="{DynamicResource FlyoutBackgroundColor}"/>
 			<Setter Property="BorderBrush" Value="Black"/>
 			<Setter Property="BorderThickness" Value="1"/>
 		</Style>
-		
+
 		<StyleInclude Source="/Styles/StyledButton.axaml"/>
 		<StyleInclude Source="/Styles/StyledLabel.axaml"/>
-		
+
 	</Window.Styles>
 
 

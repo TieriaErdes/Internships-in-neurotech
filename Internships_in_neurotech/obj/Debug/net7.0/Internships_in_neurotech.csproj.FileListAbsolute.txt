@@ -135,51 +135,29 @@ C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Intern
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships_in_neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.genruntimeconfig.cache
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships_in_neurotech\Internships_in_neurotech\obj\Debug\net7.0\ref\Internships_in_neurotech.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Internships_in_neurotech.exe
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Internships_in_neurotech.deps.json
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Internships_in_neurotech.runtimeconfig.json
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Internships_in_neurotech.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Internships_in_neurotech.pdb
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ru-RU\Internships_in_neurotech.resources.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Base.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Controls.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.DesignerSupport.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Dialogs.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Markup.Xaml.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Markup.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Metal.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.MicroCom.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.OpenGL.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Controls.ColorPicker.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Controls.DataGrid.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Desktop.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Diagnostics.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Fonts.Inter.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.FreeDesktop.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Native.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.ReactiveUI.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Remote.Protocol.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Skia.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Svg.Skia.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Themes.Fluent.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Themes.Simple.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Win32.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.X11.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\CommunityToolkit.Mvvm.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\DynamicData.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ExCSS.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\HarfBuzzSharp.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\MicroCom.Runtime.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\nunit.framework.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\nunit.framework.legacy.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ReactiveUI.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Resx.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\System.Resources.NetStandard.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ShimSkiaSharp.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\SkiaSharp.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\SkiaSharp.HarfBuzz.dll
@@ -187,9 +165,35 @@ C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Intern
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Svg.Custom.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Svg.Model.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Svg.Skia.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\System.Reactive.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-x64\native\av_libglesv2.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\LiveChartsCore.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\LiveChartsCore.SkiaSharpView.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\LiveChartsCore.SkiaSharpView.Avalonia.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.DesignerSupport.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Controls.ColorPicker.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Controls.DataGrid.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.FreeDesktop.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Native.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Remote.Protocol.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Themes.Simple.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.X11.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\DynamicData.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\nunit.framework.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\nunit.framework.legacy.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Resx.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\System.Resources.NetStandard.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\System.Drawing.Common.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\System.IO.Pipelines.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\System.Reactive.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Tmds.DBus.Protocol.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\de\Microsoft.CodeAnalysis.resources.dll
@@ -244,7 +248,6 @@ C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Intern
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-arm64\native\av_libglesv2.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-x64\native\av_libglesv2.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-x86\native\av_libglesv2.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\osx\native\libAvaloniaNative.dylib
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\linux-arm\native\libHarfBuzzSharp.so
@@ -253,7 +256,6 @@ C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Intern
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\linux-x64\native\libHarfBuzzSharp.so
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\osx\native\libHarfBuzzSharp.dylib
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\linux-arm\native\libSkiaSharp.so
@@ -262,13 +264,12 @@ C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Intern
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\linux-x64\native\libSkiaSharp.so
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\osx\native\libSkiaSharp.dylib
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-arm64\native\libSkiaSharp.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-x64\native\libSkiaSharp.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-x86\native\libSkiaSharp.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.csproj.AssemblyReference.cache
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Avalonia\Resources.Inputs.cache
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Avalonia\resources
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.Lang.Resources.en-En.resources
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.Lang.Resources.jp-JP.resources
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.Lang.Resources.resources
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.Lang.Resources.ru-RU.resources
@@ -286,9 +287,161 @@ C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Intern
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.pdb
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\ru-RU\Internships_in_neurotech.resources.dll
 C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.csproj.CopyComplete
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.genruntimeconfig.cache
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\ref\Internships_in_neurotech.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.Lang.Resources.en-En.resources
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\LiveChartsCore.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\LiveChartsCore.SkiaSharpView.dll
-C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\LiveChartsCore.SkiaSharpView.Avalonia.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Internships_in_neurotech.exe
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Internships_in_neurotech.deps.json
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Internships_in_neurotech.runtimeconfig.json
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Internships_in_neurotech.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Internships_in_neurotech.pdb
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ru-RU\Internships_in_neurotech.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Base.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Controls.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.DesignerSupport.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Dialogs.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Markup.Xaml.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Markup.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Metal.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.MicroCom.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.OpenGL.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Controls.ColorPicker.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Controls.DataGrid.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Desktop.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Diagnostics.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Fonts.Inter.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.FreeDesktop.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Native.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.ReactiveUI.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Remote.Protocol.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Skia.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Svg.Skia.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Themes.Fluent.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Themes.Simple.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.Win32.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Avalonia.X11.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\CommunityToolkit.Mvvm.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\DynamicData.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ExCSS.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\HarfBuzzSharp.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\LiveChartsCore.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\LiveChartsCore.SkiaSharpView.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\LiveChartsCore.SkiaSharpView.Avalonia.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\MicroCom.Runtime.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Microsoft.CodeAnalysis.Scripting.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\nunit.framework.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\nunit.framework.legacy.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ReactiveUI.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Resx.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\System.Resources.NetStandard.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ShimSkiaSharp.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\SkiaSharp.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\SkiaSharp.HarfBuzz.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Splat.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Svg.Custom.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Svg.Model.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Svg.Skia.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\System.IO.Pipelines.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\System.Reactive.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\Tmds.DBus.Protocol.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\cs\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\de\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\es\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\fr\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\it\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ja\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ko\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\pl\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ru\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\tr\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-arm64\native\av_libglesv2.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-x64\native\av_libglesv2.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-x86\native\av_libglesv2.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\osx\native\libAvaloniaNative.dylib
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\linux-arm\native\libHarfBuzzSharp.so
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\linux-arm64\native\libHarfBuzzSharp.so
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\linux-musl-x64\native\libHarfBuzzSharp.so
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\linux-x64\native\libHarfBuzzSharp.so
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\osx\native\libHarfBuzzSharp.dylib
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\linux-arm\native\libSkiaSharp.so
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\linux-arm64\native\libSkiaSharp.so
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\linux-musl-x64\native\libSkiaSharp.so
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\linux-x64\native\libSkiaSharp.so
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\osx\native\libSkiaSharp.dylib
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.csproj.AssemblyReference.cache
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Avalonia\Resources.Inputs.cache
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Avalonia\resources
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.Lang.Resources.en-En.resources
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.Lang.Resources.jp-JP.resources
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.Lang.Resources.resources
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.Lang.Resources.ru-RU.resources
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.csproj.GenerateResource.cache
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.GeneratedMSBuildEditorConfig.editorconfig
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.AssemblyInfoInputs.cache
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.AssemblyInfo.cs
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.csproj.CoreCompileInputs.cache
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Avalonia\references
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Avalonia\original.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Avalonia\original.pdb
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Avalonia\original.ref.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\refint\Internships_in_neurotech.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.pdb
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\ru-RU\Internships_in_neurotech.resources.dll
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.csproj.CopyComplete
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\Internships_in_neurotech.genruntimeconfig.cache
+C:\Avalonia\Internships-in-neurotech\Internships_in_neurotech\obj\Debug\net7.0\ref\Internships_in_neurotech.dll

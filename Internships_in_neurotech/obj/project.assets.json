@@ -5181,11 +5181,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Програмирование\\Learning Avalonia UI\\Internships-in-neurotech\\Internships_in_neurotech\\Internships_in_neurotech.csproj",
+      "projectUniqueName": "C:\\Avalonia\\Internships-in-neurotech\\Internships_in_neurotech\\Internships_in_neurotech.csproj",
       "projectName": "Internships_in_neurotech",
-      "projectPath": "C:\\Users\\User\\Desktop\\Програмирование\\Learning Avalonia UI\\Internships-in-neurotech\\Internships_in_neurotech\\Internships_in_neurotech.csproj",
+      "projectPath": "C:\\Avalonia\\Internships-in-neurotech\\Internships_in_neurotech\\Internships_in_neurotech.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Програмирование\\Learning Avalonia UI\\Internships-in-neurotech\\Internships_in_neurotech\\obj\\",
+      "outputPath": "C:\\Avalonia\\Internships-in-neurotech\\Internships_in_neurotech\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
