@@ -30,6 +30,18 @@ namespace Internships_in_neurotech.Models
 
             DataFromFile = new double[serializedChannel.bosMeth.Channels.Capacity][];
 
+
+            //Task[] tasks = new Task[serializedChannel.bosMeth.Channels.Capacity];
+
+
+            //for (int i = 0; i < tasks.Length; i++)
+            //{
+            //    DataFromFile[i] = new double[numOfTicks];
+            //    tasks[i] = GetDataAsync(serializedChannel.FilePath + serializedChannel.bosMeth.Channels[i].SignalFileName, i);
+            //}
+
+            //Task.WaitAll(tasks);
+
             Methods(serializedChannel);
         }
 
@@ -42,6 +54,8 @@ namespace Internships_in_neurotech.Models
             {
                 DataFromFile[i] = new double[numOfTicks];
                 tasks[i] = GetDataAsync(serializedChannel.FilePath + serializedChannel.bosMeth.Channels[i].SignalFileName, i);
+
+                await tasks[i];
             }
 
             Task.WaitAll(tasks);
