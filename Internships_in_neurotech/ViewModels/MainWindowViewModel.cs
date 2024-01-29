@@ -48,7 +48,7 @@ namespace Internships_in_neurotech.ViewModels
         public SerializedChannel Channels;
 
         
-        private readonly Signal? signalBase;
+        private Signal? currentSignal;
         private ObservableCollection<ObservableValue>? _ChartValues;
         public ObservableCollection<ISeries> Series { get; set; }
 
@@ -76,33 +76,18 @@ namespace Internships_in_neurotech.ViewModels
             }
 
 
-            signalBase = new Signal(in Channels);
-            CreatingDefaultChart();
+            CreatingChart();
         }
 
 
         #region Chart configuration
 
-        private void CreatingDefaultChart()
+        private void CreatingChart()
         {
-            Series = new ObservableCollection<ISeries>
-            {
-                new LineSeries<ObservableValue>
-                {
-                    Values = null,
-                    GeometrySize = 0,
-                    GeometryStroke = null,
-                    Stroke = new SolidColorPaint(SKColors.Silver) { StrokeThickness = 2},
-                    Fill = null
-                }
-            };
-        }
-
-        private void CreatingSelectedChart(in int selectedSignal)
-        {
+            currentSignal = new Signal(in Channels);
             _ChartValues = new ObservableCollection<ObservableValue>();
 
-            foreach (var item in signalBase.DataFromFile[selectedSignal])
+            foreach (var item in currentSignal.DataFromFile[0])
             {
                 _ChartValues.Add(new(item));
             }
@@ -176,19 +161,14 @@ namespace Internships_in_neurotech.ViewModels
         {
             Debug.WriteLine("Call successful");
 
-            //foreach (var channel in Channels.bosMeth.Channels)
-            for (int i = 0; i < Channels.bosMeth.Channels.Count; i++) 
+            foreach (var channel in Channels.bosMeth.Channels)
             {
-                if (Channels.bosMeth.Channels[i].SignalFileName == (string?)selectedItemName)
-                {
-                    CreatingSelectedChart(in i);
-                    InsertValuesToTheSignalInfo(Channels.bosMeth.Channels[i]);
-                    break;
-                }
+                if (channel.SignalFileName == selectedItemName)
+                    InsertValuesToTheSignalInfo(channel);
             }
         }
 
-        public void InsertValuesToTheSignalInfo(Channel channel)
+        public void InsertValuesToTheSignalInfo(Channel? channel)
         {
             if (CultureInfo.CurrentCulture.Name == "ru-RU")
             {
