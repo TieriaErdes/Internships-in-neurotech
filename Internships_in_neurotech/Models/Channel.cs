@@ -31,26 +31,19 @@ namespace Internships_in_neurotech.Models
 
     public class Channels: List<Channel>  
     {
-        //public List<Channel> channels { get; set; } = new List<Channel>();
-
         public Channels() { }
-        public Channels(List<Channel> channels)
-        {
-            //this.channels = channels;
-        }
     }
 
     public class Channel
     {
         [XmlAttribute]
-        public int UnicNumber { get; set; } = default(int);
+        public int UnicNumber;
         [XmlAttribute]
-        public string SignalFileName { get; set; } = string.Empty;
+        public string SignalFileName;
         [XmlAttribute]
-        public int Type { get; set; } = default(int);
+        public int Type;
         [XmlAttribute]
-        public int EffectiveFd {  get; set; } = default(int);
-
+        public int EffectiveFd;
 
         public Channel() { }
         public Channel(int unicNumber, string signalFileName, int type, int effectiveFd)

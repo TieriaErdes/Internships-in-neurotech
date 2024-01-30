@@ -12,27 +12,31 @@ namespace Internships_in_neurotech.Models
     public class SerializedChannel
     {
 
-        public BOSMeth? bosMeth = new BOSMeth(Guid.Empty);
+        public BOSMeth? bosMeth;
 
         private XmlSerializer formatter = new XmlSerializer(typeof(BOSMeth));
 
+        /// <summary>
+        /// полный путь к обрабатываемым файлам
+        /// </summary>
         public string FilePath = @"C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\Models\";
-        private string fileName = "C:\\Users\\User\\Desktop\\Програмирование\\Learning Avalonia UI\\Internships-in-neurotech\\Internships_in_neurotech\\Models\\MethDescription.xml";
+        private string fileName = @"MethDescription.xml";
 
+        // Десериализатор 
         private void DeserializeData()
+        {
+            using (FileStream fileStream = new FileStream(FilePath + fileName, FileMode.Open))
             {
-            using (FileStream fileStream = new FileStream(fileName, FileMode.Open))
-            {
-                bosMeth = formatter.Deserialize(fileStream) as BOSMeth;
-                //var obj = formatter.Deserialize(fileStream);
+                bosMeth = formatter.Deserialize(fileStream) as BOSMeth ?? throw new Exception("Deserializing xml file is failed");
 
-                if (bosMeth != null)
-                    foreach (var channel in bosMeth.Channels)
-                        Debug.WriteLine($"signal {channel.SignalFileName}: it is {channel.Type} type");
+                if (bosMeth.Channels == null) throw new Exception("Channel list equals to null");
+
+                foreach (var channel in bosMeth.Channels)
+                    Debug.WriteLine($"signal {channel.SignalFileName}: it is {channel.Type} type");
             }
         }
 
-        public void SerializeData(ref string _fileName)
+        private void SerializeData(ref string _fileName)
         {
             if (bosMeth == null)
             {
@@ -55,8 +59,9 @@ namespace Internships_in_neurotech.Models
         public SerializedChannel() 
         {
             DeserializeData();
-           //SerializeData(ref fileName);
         }
+
+
         /// <summary>
         /// Constructor for deserialize data to internal field of class
         /// and serialize this data to the new file or update old file

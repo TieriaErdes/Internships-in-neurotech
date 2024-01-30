@@ -23,6 +23,7 @@ namespace Internships_in_neurotech.Views
         private void ListBox_SelectionChanged(object? sender, Avalonia.Controls.SelectionChangedEventArgs e)
         {
             ((MainWindowViewModel)DataContext).UpdateUISignalsInfo(SignalsPopupListBox.SelectedItem);
+            fileButton.Flyout.Hide();
         }
 
         private void Binding_1(object? sender, Avalonia.Controls.SelectionChangedEventArgs e)
