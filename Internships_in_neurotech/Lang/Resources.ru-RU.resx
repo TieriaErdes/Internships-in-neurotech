@@ -117,8 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AdditionalInformation" xml:space="preserve">
+    <value>Дополнительная информация:</value>
+  </data>
   <data name="Choosinglanguage" xml:space="preserve">
     <value>Выбор языка:</value>
+  </data>
+  <data name="ClearThePoints" xml:space="preserve">
+    <value>Очистить точки</value>
+  </data>
+  <data name="ExpectedValue" xml:space="preserve">
+    <value>Математическое ожидание</value>
   </data>
   <data name="GreetingText" xml:space="preserve">
     <value>Хорошего дня!</value>
@@ -126,8 +135,11 @@
   <data name="InformationTitleText" xml:space="preserve">
     <value>Информация из файлов сигналов:</value>
   </data>
-  <data name="NamesOfSignals" xml:space="preserve">
-    <value>Названия сигналов:</value>
+  <data name="MaximumsAtIntervals" xml:space="preserve">
+    <value>Максимумы на интервалах</value>
+  </data>
+  <data name="MinimaAtIntervals" xml:space="preserve">
+    <value>Минимумы на интервалах</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Настройки:</value>

@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace Internships_in_neurotech.Models
@@ -19,58 +15,49 @@ namespace Internships_in_neurotech.Models
         /// <summary>
         /// полный путь к обрабатываемым файлам
         /// </summary>
-        public string FilePath = @"C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\Models\";
+        public string? DirectoryPath;
+        //private string? path = GetThisFilePath();
+        //private static string? GetThisFilePath([CallerFilePath] string? path = null)
+        //{
+        //    return path;
+        //}
+
         private string fileName = @"MethDescription.xml";
 
         // Десериализатор 
         private void DeserializeData()
         {
-            using (FileStream fileStream = new FileStream(FilePath + fileName, FileMode.Open))
+            try
             {
-                bosMeth = formatter.Deserialize(fileStream) as BOSMeth ?? throw new Exception("Deserializing xml file is failed");
+                using (FileStream fileStream = new FileStream(DirectoryPath + fileName, FileMode.Open))
+                {
+                    bosMeth = formatter.Deserialize(fileStream) as BOSMeth ?? throw new Exception("Deserializing xml file is failed");
 
-                if (bosMeth.Channels == null) throw new Exception("Channel list equals to null");
+                    if (bosMeth.Channels == null) throw new Exception("Channel list equals to null");
 
-                foreach (var channel in bosMeth.Channels)
-                    Debug.WriteLine($"signal {channel.SignalFileName}: it is {channel.Type} type");
+                    foreach (var channel in bosMeth.Channels)
+                        Debug.WriteLine($"signal {channel.SignalFileName}: it is {channel.Type} type");
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine($"Deserializing failed. Cause: {e.Message}");
+                //System.Diagnostics.Process.Start("explorer.exe");
+                
             }
         }
 
-        private void SerializeData(ref string _fileName)
-        {
-            if (bosMeth == null)
-            {
-                throw new Exception("It is impossible to serialize channels into an xml file. bosMeth equals to null");
-            }
+        
 
-            if (_fileName != fileName)
-                fileName = _fileName;
-
-            //using (FileStream fileStream = new FileStream("C:\\Users\\User\\Desktop\\Програмирование\\Learning Avalonia UI\\Internships-in-neurotech\\Internships_in_neurotech\\Models\\TestMethDescription.xml", FileMode.OpenOrCreate))
-            using (FileStream fileStream = new FileStream(fileName, FileMode.OpenOrCreate))
-            {
-                formatter.Serialize(fileStream, bosMeth);
-            }
-        }
 
         /// <summary>
         /// Constructor for deserialize data from xml file
         /// </summary>
-        public SerializedChannel() 
+        public SerializedChannel(string? path)
         {
+            //DirectoryPath = Path.GetDirectoryName(path) + "\\" ?? throw new Exception($"DirectoryPath is equals to null");
+            DirectoryPath = path + "\\"; 
             DeserializeData();
-        }
-
-
-        /// <summary>
-        /// Constructor for deserialize data to internal field of class
-        /// and serialize this data to the new file or update old file
-        /// </summary>
-        /// <param name="_fileName"></param>
-        public SerializedChannel(string _fileName)
-        {
-            DeserializeData();
-            SerializeData(ref _fileName);
         }
     }
 }

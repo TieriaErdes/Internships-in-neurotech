@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 
@@ -12,7 +8,7 @@ namespace Internships_in_neurotech.Models
     public class BOSMeth 
     {
         [XmlAttribute]
-        public Guid TemplateGUID { get; set; } = Guid.NewGuid();
+        public Guid TemplateGUID { get; set; }
         //public Channels? Channels { get; set; } = new Channels()
         //{
         //    new Channel (0, "Signal0.bcf", 1 , 1000),

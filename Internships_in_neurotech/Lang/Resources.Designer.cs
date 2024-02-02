@@ -61,11 +61,38 @@ namespace Internships_in_neurotech.Lang {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Additional information:.
+        /// </summary>
+        public static string AdditionalInformation {
+            get {
+                return ResourceManager.GetString("AdditionalInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Choosinglanguage.
         /// </summary>
         public static string Choosinglanguage {
             get {
                 return ResourceManager.GetString("Choosinglanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Очистить точки.
+        /// </summary>
+        public static string ClearThePoints {
+            get {
+                return ResourceManager.GetString("ClearThePoints", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Expected value.
+        /// </summary>
+        public static string ExpectedValue {
+            get {
+                return ResourceManager.GetString("ExpectedValue", resourceCulture);
             }
         }
         
@@ -88,11 +115,20 @@ namespace Internships_in_neurotech.Lang {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Названия сигналов: ss.
+        ///   Ищет локализованную строку, похожую на Maximums at intervals.
         /// </summary>
-        public static string NamesOfSignals {
+        public static string MaximumsAtIntervals {
             get {
-                return ResourceManager.GetString("NamesOfSignals", resourceCulture);
+                return ResourceManager.GetString("MaximumsAtIntervals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Minima at intervals.
+        /// </summary>
+        public static string MinimaAtIntervals {
+            get {
+                return ResourceManager.GetString("MinimaAtIntervals", resourceCulture);
             }
         }
         

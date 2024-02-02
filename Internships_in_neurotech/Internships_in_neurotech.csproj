@@ -24,6 +24,7 @@
     <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.7" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
     <PackageReference Include="LiveChartsCore.SkiaSharpView.Avalonia" Version="2.0.0-rc2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="NUnit" Version="4.0.1" />
     <PackageReference Include="Resx" Version="0.2.1" />
     <PackageReference Include="ResXResourceReader.NetStandard" Version="1.2.0" />
@@ -47,5 +48,9 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>Resources.resx</DependentUpon>
       </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Services\" />
     </ItemGroup>
 </Project>

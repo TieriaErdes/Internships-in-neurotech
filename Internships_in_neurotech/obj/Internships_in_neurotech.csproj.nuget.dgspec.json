@@ -81,6 +81,10 @@
               "target": "Package",
               "version": "[2.0.0-rc2, )"
             },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "NUnit": {
               "target": "Package",
               "version": "[4.0.1, )"
