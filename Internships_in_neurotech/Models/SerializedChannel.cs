@@ -16,20 +16,15 @@ namespace Internships_in_neurotech.Models
         /// полный путь к обрабатываемым файлам
         /// </summary>
         public string? DirectoryPath;
-        //private string? path = GetThisFilePath();
-        //private static string? GetThisFilePath([CallerFilePath] string? path = null)
-        //{
-        //    return path;
-        //}
 
-        private string fileName = @"MethDescription.xml";
+        private const string fileName = @"MethDescription.xml";
 
         // Десериализатор 
         private void DeserializeData()
         {
             try
             {
-                using (FileStream fileStream = new FileStream(DirectoryPath + fileName, FileMode.Open))
+                using (FileStream fileStream = new FileStream(Path.Combine(DirectoryPath, fileName), FileMode.Open))
                 {
                     bosMeth = formatter.Deserialize(fileStream) as BOSMeth ?? throw new Exception("Deserializing xml file is failed");
 
@@ -42,12 +37,8 @@ namespace Internships_in_neurotech.Models
             catch (Exception e)
             {
                 Debug.WriteLine($"Deserializing failed. Cause: {e.Message}");
-                //System.Diagnostics.Process.Start("explorer.exe");
-                
             }
         }
-
-        
 
 
         /// <summary>
@@ -56,7 +47,7 @@ namespace Internships_in_neurotech.Models
         public SerializedChannel(string? path)
         {
             //DirectoryPath = Path.GetDirectoryName(path) + "\\" ?? throw new Exception($"DirectoryPath is equals to null");
-            DirectoryPath = path + "\\"; 
+            DirectoryPath = path + Path.DirectorySeparatorChar; 
             DeserializeData();
         }
     }

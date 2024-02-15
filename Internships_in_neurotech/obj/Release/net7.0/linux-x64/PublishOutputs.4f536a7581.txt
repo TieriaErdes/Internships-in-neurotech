@@ -1,0 +1,4 @@
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Release\net7.0\publish\linux-x64\Internships_in_neurotech.pdb
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Release\net7.0\publish\linux-x64\libHarfBuzzSharp.so
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Release\net7.0\publish\linux-x64\libSkiaSharp.so
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Release\net7.0\publish\linux-x64\Internships_in_neurotech

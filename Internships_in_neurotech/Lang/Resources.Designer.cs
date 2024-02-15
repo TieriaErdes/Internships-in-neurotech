@@ -97,11 +97,29 @@ namespace Internships_in_neurotech.Lang {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Fd:.
+        /// </summary>
+        public static string Fd {
+            get {
+                return ResourceManager.GetString("Fd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Good Day!.
         /// </summary>
         public static string GreetingText {
             get {
                 return ResourceManager.GetString("GreetingText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на  Гц.
+        /// </summary>
+        public static string Hz {
+            get {
+                return ResourceManager.GetString("Hz", resourceCulture);
             }
         }
         
@@ -133,6 +151,24 @@ namespace Internships_in_neurotech.Lang {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Название: .
+        /// </summary>
+        public static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number:.
+        /// </summary>
+        public static string Number {
+            get {
+                return ResourceManager.GetString("Number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Настройки:.
         /// </summary>
         public static string Settings {
@@ -147,6 +183,60 @@ namespace Internships_in_neurotech.Lang {
         public static string SignalsAnalizator {
             get {
                 return ResourceManager.GetString("SignalsAnalizator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Сигналы не обнаружены. \nПожалуйста, выберите папку с сигналами..
+        /// </summary>
+        public static string SignalsState {
+            get {
+                return ResourceManager.GetString("SignalsState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Названия сигналов:.
+        /// </summary>
+        public static string SignalsStateCorrectly {
+            get {
+                return ResourceManager.GetString("SignalsStateCorrectly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ЭЭГ.
+        /// </summary>
+        public static string SignalType1 {
+            get {
+                return ResourceManager.GetString("SignalType1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ЭКГ.
+        /// </summary>
+        public static string SignalType2 {
+            get {
+                return ResourceManager.GetString("SignalType2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ЭМГ.
+        /// </summary>
+        public static string SignalType3 {
+            get {
+                return ResourceManager.GetString("SignalType3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Тип: .
+        /// </summary>
+        public static string Type {
+            get {
+                return ResourceManager.GetString("Type", resourceCulture);
             }
         }
     }

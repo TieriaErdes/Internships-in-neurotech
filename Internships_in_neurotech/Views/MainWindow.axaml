@@ -8,8 +8,8 @@
 		xmlns:lvc="using:LiveChartsCore.SkiaSharpView.Avalonia"
         xmlns:vms="using:ViewModelsSamples.Lines.Basic"
 		xmlns:controls="clr-namespace:Internships_in_neurotech"
-        mc:Ignorable="d" d:DesignWidth="1700" d:DesignHeight="720"
-		Width="1700" Height="720"
+        mc:Ignorable="d" d:DesignWidth="1650" d:DesignHeight="700"
+		Width="1650" Height="700"
         x:Class="Internships_in_neurotech.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
@@ -129,7 +129,7 @@
 					</Border>
 
 					<!--Список возникших ошибок-->
-					<ListBox Grid.Column="1" DockPanel.Dock="Bottom" ItemsSource="{Binding ErrorMessages}" Background="Transparent"/>
+					<ListBox Grid.Column="1" DockPanel.Dock="Bottom" ItemsSource="{Binding ErrorMessages}" Background="Transparent" Foreground="{DynamicResource TextColor}"/>
 					
 					<!--Graphic map-->
 					<Border Grid.Column="1" BorderBrush="{DynamicResource SecondaryBackgroundColor}" BorderThickness="0, 0, 4, 4">

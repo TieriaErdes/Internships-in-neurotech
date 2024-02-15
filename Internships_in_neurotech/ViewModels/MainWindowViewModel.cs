@@ -122,7 +122,7 @@ namespace Internships_in_neurotech.ViewModels
         }
 
         [RelayCommand]
-        public void DisplayMathPoints(string senderComponentName)
+        public void DisplayMathPoints(string senderComponentParametr)
         {
             if (selectedSignal == -1)
             {
@@ -130,19 +130,19 @@ namespace Internships_in_neurotech.ViewModels
                 return;
             }
 
-            switch (senderComponentName)
+            switch (senderComponentParametr)
             {
                 case "ExpectationButton":
-                    PointGenerator(signalData!.AverageValue[selectedSignal].ToArray());
+                    PointGenerator(signalData!.averageValue[selectedSignal]);
                     break;
                 case "MinButton":
-                    PointGenerator(signalData!.MinValue[selectedSignal].ToArray());
+                    PointGenerator(signalData!.minValue[selectedSignal]);
                     break;
                 case "MaxButton":
-                    PointGenerator(signalData!.MaxValue[selectedSignal].ToArray());
+                    PointGenerator(signalData!.maxValue[selectedSignal]);
                     break;
                 default:
-                    Debug.WriteLine($"{senderComponentName} can not display points");
+                    Debug.WriteLine($"{senderComponentParametr} can not display points");
                     break;
             }
         }
@@ -153,7 +153,7 @@ namespace Internships_in_neurotech.ViewModels
 
             for (int i = 0; resultArray.Length > i; i++)
             {
-                points.Add(new ObservablePoint(x: (i * 1000), y: resultArray[i]));
+                points.Add(new ObservablePoint(x: (i * Channels.bosMeth.Channels[selectedSignal].EffectiveFd), y: resultArray[i]));
             }
 
             if (Series.Count > 1) Series.RemoveAt(1);
@@ -217,39 +217,24 @@ namespace Internships_in_neurotech.ViewModels
 
         public void SetDefaultInformationText()
         {
-            if (CultureInfo.CurrentCulture.Name == "ru-RU")
-            {
-                SignalsStatePresenter = "Сигналы не обнаружены. \nПожалуйста, выберите папку с сигналами.";
-                InformationNameOfSignal = "Название: ";
-                InformationTypeOfSignal = "Тип: ";
-                InformationUnicNumberOfSignal = "Номер: ";
-                InformationEffectiveFdOfSignal = "Частота: ";
-            }
-            else // для всех остальных языков английская локализация
-            {
-                SignalsStatePresenter = "No signals detected. \nPlease select a folder with signals.";
-                InformationNameOfSignal = "Name: ";
-                InformationTypeOfSignal = "Type: ";
-                InformationUnicNumberOfSignal = "UnicNum: ";
-                InformationEffectiveFdOfSignal = "EffectiveFd: ";
-            }
+                SignalsStatePresenter = Lang.Resources.SignalsState;
+
+                InformationNameOfSignal = Lang.Resources.Name;
+                InformationTypeOfSignal = Lang.Resources.Type;
+                InformationUnicNumberOfSignal = Lang.Resources.Number;
+                InformationEffectiveFdOfSignal = Lang.Resources.Fd;
+             
         }
 
         private void UpdateSignalsState()
         {
             if (Channels is null)
             {
-                if (CultureInfo.CurrentCulture.Name == "ru-Ru")
-                    SignalsStatePresenter = "Сигналы не обнаружены. \nПожалуйста, выберите папку с сигналами.";
-                else
-                    SignalsStatePresenter = "No signals detected. \nPlease select a folder with signals.";
+                SignalsStatePresenter = Lang.Resources.SignalsStateCorrectly;
             }
             else
             {
-                if (CultureInfo.CurrentCulture.Name == "ru-RU")
-                    SignalsStatePresenter = "Названия сигналов: ";
-                else
-                    SignalsStatePresenter = "Names of signals: ";
+                SignalsStatePresenter = Lang.Resources.SignalsStateCorrectly;
             }
         }
 
@@ -292,11 +277,13 @@ namespace Internships_in_neurotech.ViewModels
         [RelayCommand]
         public void UpdateUISignalsInfo(object? selectedItemName)
         {
+            if (selectedItemName is null) return;
+
             Debug.WriteLine("Call successful");
 
-            for (int i = 0; i < Channels.bosMeth.Channels.Count; i++)
+            for (int i = 0; i < Channels.bosMeth!.Channels!.Count; i++)
             {
-                if (Channels.bosMeth.Channels[i].SignalFileName == (string?)selectedItemName)
+                if (Channels.bosMeth.Channels[i].SignalFileName.Equals(selectedItemName))
                 {
                     selectedSignal = i;
                     CreatingSelectedChart();
@@ -310,43 +297,25 @@ namespace Internships_in_neurotech.ViewModels
         {
             switch (channel.Type)
             {
-                case 1 when CultureInfo.CurrentCulture.Name is "ru-RU":
-                    return "ЭЭГ";
-                case 2 when CultureInfo.CurrentCulture.Name is "ru-RU":
-                    return "ЭКГ";
-                case 3 when CultureInfo.CurrentCulture.Name is "ru-RU":
-                    return "ЭМГ";
                 case 1:
-                    return "EEG";
+                    return Lang.Resources.SignalType1;
                 case 2:
-                    return "ECG";
+                    return Lang.Resources.SignalType2;
                 case 3:
-                    return "EMG";
+                    return Lang.Resources.SignalType3;
                 default:
                     return "";
             }
         }
-        
+
 
         // Вставка текста в табло информации о сигналах
         public void SetValuesToTheSignalInfo()
         {
-            if (CultureInfo.CurrentCulture.Name == "ru-RU")
-            {
-                InformationNameOfSignal = "Название: " + Channels.bosMeth.Channels[selectedSignal].SignalFileName;
-                InformationTypeOfSignal = "Тип: " + GetType(Channels.bosMeth.Channels[selectedSignal]);
-                InformationUnicNumberOfSignal = "Номер: " + Channels.bosMeth.Channels[selectedSignal].UnicNumber.ToString();
-                InformationEffectiveFdOfSignal = "Частота: " + Channels.bosMeth.Channels[selectedSignal].EffectiveFd.ToString() + " Гц";
-            }
-            else // для всех остальных языков английская локализация
-            {
-                InformationNameOfSignal = "Name: " + Channels.bosMeth.Channels[selectedSignal].SignalFileName;
-                InformationTypeOfSignal = "Type: " + GetType(Channels.bosMeth.Channels[selectedSignal]);
-                InformationUnicNumberOfSignal = "UnicNum: " + Channels.bosMeth.Channels[selectedSignal].UnicNumber.ToString();
-                InformationEffectiveFdOfSignal = "EffectiveFd: " + Channels.bosMeth.Channels[selectedSignal].EffectiveFd.ToString() + " Hz";
-            }
-
-            ChartTitle.Text = Channels.bosMeth.Channels[selectedSignal].SignalFileName;
+            InformationNameOfSignal = Lang.Resources.Name + Channels.bosMeth!.Channels![selectedSignal].SignalFileName;
+            InformationTypeOfSignal = Lang.Resources.Type + GetType(Channels.bosMeth.Channels[selectedSignal]);
+            InformationUnicNumberOfSignal = Lang.Resources.Number + Channels.bosMeth.Channels[selectedSignal].UnicNumber.ToString();
+            InformationEffectiveFdOfSignal = Lang.Resources.Fd + Channels.bosMeth.Channels[selectedSignal].EffectiveFd.ToString() + Lang.Resources.Hz;
         }
 
         

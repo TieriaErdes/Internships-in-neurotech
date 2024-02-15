@@ -1,0 +1,5 @@
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Release\net7.0\publish\win-x64\Internships_in_neurotech.pdb
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Release\net7.0\publish\win-x64\av_libglesv2.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Release\net7.0\publish\win-x64\libHarfBuzzSharp.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Release\net7.0\publish\win-x64\libSkiaSharp.dll
+C:\Users\User\Desktop\Програмирование\Learning Avalonia UI\Internships-in-neurotech\Internships_in_neurotech\bin\Release\net7.0\publish\win-x64\Internships_in_neurotech.exe

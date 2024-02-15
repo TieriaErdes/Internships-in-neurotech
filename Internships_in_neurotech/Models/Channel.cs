@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 
 namespace Internships_in_neurotech.Models
 {
-    public class BOSMeth 
+    public record class BOSMeth 
     {
         [XmlAttribute]
         public Guid TemplateGUID { get; set; }
@@ -19,9 +19,10 @@ namespace Internships_in_neurotech.Models
         public Channels? Channels { get; set; }
 
         public BOSMeth() { }
-        public BOSMeth(Guid templateGuid)
+        public BOSMeth(Guid templateGuid, Channels? channels)
         {
             TemplateGUID = templateGuid;
+            Channels = channels;
         }
     }
 
@@ -35,7 +36,7 @@ namespace Internships_in_neurotech.Models
         [XmlAttribute]
         public int UnicNumber;
         [XmlAttribute]
-        public string SignalFileName;
+        public string? SignalFileName;
         [XmlAttribute]
         public int Type;
         [XmlAttribute]

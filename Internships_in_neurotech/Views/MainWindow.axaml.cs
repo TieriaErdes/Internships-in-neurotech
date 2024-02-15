@@ -1,5 +1,8 @@
 using Avalonia.Controls;
+using Avalonia.Markup.Xaml;
+using Avalonia.Threading;
 using Internships_in_neurotech.ViewModels;
+using System;
 using System.Globalization;
 
 namespace Internships_in_neurotech.Views

@@ -129,8 +129,14 @@
   <data name="ExpectedValue" xml:space="preserve">
     <value>Математическое ожидание</value>
   </data>
+  <data name="Fd" xml:space="preserve">
+    <value>Частота: </value>
+  </data>
   <data name="GreetingText" xml:space="preserve">
     <value>Хорошего дня!</value>
+  </data>
+  <data name="Hz" xml:space="preserve">
+    <value> Гц</value>
   </data>
   <data name="InformationTitleText" xml:space="preserve">
     <value>Информация из файлов сигналов:</value>
@@ -141,11 +147,36 @@
   <data name="MinimaAtIntervals" xml:space="preserve">
     <value>Минимумы на интервалах</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Название: </value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Номер: </value>
+  </data>
   <data name="Settings" xml:space="preserve">
     <value>Настройки:</value>
   </data>
   <data name="SignalsAnalizator" xml:space="preserve">
     <value>Анализатор Сигналов</value>
     <comment>title</comment>
+  </data>
+  <data name="SignalsState" xml:space="preserve">
+    <value>Сигналы не обнаружены. 
+Пожалуйста, выберите папку с сигналами.</value>
+  </data>
+  <data name="SignalsStateCorrectly" xml:space="preserve">
+    <value>Названия сигналов: </value>
+  </data>
+  <data name="SignalType1" xml:space="preserve">
+    <value>ЭЭГ</value>
+  </data>
+  <data name="SignalType2" xml:space="preserve">
+    <value>ЭКГ</value>
+  </data>
+  <data name="SignalType3" xml:space="preserve">
+    <value>ЭМГ</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Тип: </value>
   </data>
 </root>
