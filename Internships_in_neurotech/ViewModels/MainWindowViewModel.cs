@@ -15,6 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace Internships_in_neurotech.ViewModels
 {
@@ -236,7 +237,7 @@ namespace Internships_in_neurotech.ViewModels
 
         // Команда кнопки, которая отвечает за открытие окна выбора файла
         [RelayCommand]
-        public async void OpenFolderDialog()
+        public async Task OpenFolderDialog()
         {
             ErrorMessages?.Clear();
             try
