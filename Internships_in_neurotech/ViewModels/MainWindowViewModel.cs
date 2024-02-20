@@ -242,11 +242,10 @@ namespace Internships_in_neurotech.ViewModels
             ErrorMessages?.Clear();
             try
             {
-                _filesService = App.Current?.Services?.GetService<IFilesService>();
-                if (_filesService is null) throw new NullReferenceException("Missing File Service instance.");
+                _filesService = App.Current?.Services?.GetService<IFilesService>() 
+                    ?? throw new NullReferenceException("Missing File Service instance.");
 
                 var folder = await _filesService.GetFolderAsync();
-                // НУЖНО ПРИДУМАТЬ ЧТО ДЕЛАТЬ В СЛУЧАЕ, ЕСЛИ folder РАВЕН null
                 if (folder is null) return;
 
                 // класс десериализации MethDescroption.xml. Хранит в себе же все данные о сигналах 
