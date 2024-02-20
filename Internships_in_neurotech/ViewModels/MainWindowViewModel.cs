@@ -53,7 +53,7 @@ namespace Internships_in_neurotech.ViewModels
         /// <summary>
         /// Его дети хранят в себе информацию о массиве сигналов (их конфигурации)
         /// </summary>
-        public SerializedChannel? Channels;
+        private SerializedChannel? _channels;
 
         /// <summary>
         /// Хранит значения сигналов из соответствующих им сигналов.
@@ -115,7 +115,7 @@ namespace Internships_in_neurotech.ViewModels
             }
 
             Series![0].Values = _ChartValues;
-            ChartTitle.Text = Channels!.bosMeth!.Channels![selectedSignal].SignalFileName!;
+            ChartTitle.Text = _channels!.bosMeth!.Channels![selectedSignal].SignalFileName!;
         }
 
         [RelayCommand]
@@ -150,7 +150,7 @@ namespace Internships_in_neurotech.ViewModels
 
             for (int i = 0; resultArray.Length > i; i++)
             {
-                points.Add(new ObservablePoint(x: (i * Channels!.bosMeth!.Channels![selectedSignal].EffectiveFd), y: resultArray[i]));
+                points.Add(new ObservablePoint(x: (i * _channels!.bosMeth!.Channels![selectedSignal].EffectiveFd), y: resultArray[i]));
             }
 
             if (Series!.Count > 1) Series.RemoveAt(1);
@@ -227,7 +227,7 @@ namespace Internships_in_neurotech.ViewModels
 
         private void SetSignalsState()
         {
-            if (Channels is null)
+            if (_channels is null)
                 SignalsStatePresenter = Lang.Resources.SignalsState;
             else
                 SignalsStatePresenter = Lang.Resources.SignalsStateCorrectly;
@@ -249,17 +249,17 @@ namespace Internships_in_neurotech.ViewModels
                 if (folder is null) return;
 
                 // класс десериализации MethDescroption.xml. Хранит в себе же все данные о сигналах 
-                Channels = new SerializedChannel(folder.TryGetLocalPath());
+                _channels = new SerializedChannel(folder.TryGetLocalPath());
                 SetSignalsState();
-                if (Channels is null) return;
+                if (_channels is null) return;
 
                 ChannelNames = new ObservableCollection<string>();
-                foreach (var channel in Channels.bosMeth!.Channels!)
+                foreach (var channel in _channels.bosMeth!.Channels!)
                 {
                     ChannelNames.Add(channel.SignalFileName!);
                 }
 
-                _signalData = new SignalData(in Channels);
+                _signalData = new SignalData(in _channels);
             }
             catch (Exception ex)
             {
@@ -276,9 +276,9 @@ namespace Internships_in_neurotech.ViewModels
 
             Debug.WriteLine("Call successful");
 
-            for (int i = 0; i < Channels!.bosMeth!.Channels!.Count; i++)
+            for (int i = 0; i < _channels!.bosMeth!.Channels!.Count; i++)
             {
-                if (Channels.bosMeth.Channels[i].SignalFileName!.Equals(selectedItemName))
+                if (_channels.bosMeth.Channels[i].SignalFileName!.Equals(selectedItemName))
                 {
                     selectedSignal = i;
                     CreatingSelectedChart();
@@ -309,10 +309,10 @@ namespace Internships_in_neurotech.ViewModels
         {
             SetSignalsState();
 
-            InformationNameOfSignal = Lang.Resources.Name + Channels!.bosMeth!.Channels![selectedSignal].SignalFileName;
-            InformationTypeOfSignal = Lang.Resources.Type + GetType(Channels.bosMeth.Channels[selectedSignal]);
-            InformationUnicNumberOfSignal = Lang.Resources.Number + Channels.bosMeth.Channels[selectedSignal].UnicNumber.ToString();
-            InformationEffectiveFdOfSignal = Lang.Resources.Fd + Channels.bosMeth.Channels[selectedSignal].EffectiveFd.ToString() + Lang.Resources.Hz;
+            InformationNameOfSignal = Lang.Resources.Name + _channels!.bosMeth!.Channels![selectedSignal].SignalFileName;
+            InformationTypeOfSignal = Lang.Resources.Type + GetType(_channels.bosMeth.Channels[selectedSignal]);
+            InformationUnicNumberOfSignal = Lang.Resources.Number + _channels.bosMeth.Channels[selectedSignal].UnicNumber.ToString();
+            InformationEffectiveFdOfSignal = Lang.Resources.Fd + _channels.bosMeth.Channels[selectedSignal].EffectiveFd.ToString() + Lang.Resources.Hz;
 
             XAxes[0].Name = Lang.Resources.XAxis;
             YAxes[0].Name = Lang.Resources.YAxis;

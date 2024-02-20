@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Internships_in_neurotech.Models
 {
-    internal class SignalData
+    internal sealed class SignalData
     {
         public double[][] DataFromFile;
 

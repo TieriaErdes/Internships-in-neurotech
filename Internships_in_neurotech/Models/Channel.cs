@@ -5,11 +5,11 @@ using System.Xml.Serialization;
 
 namespace Internships_in_neurotech.Models
 {
-    public record class BOSMeth 
+    public sealed class BOSMeth 
     {
         [XmlAttribute]
         public Guid TemplateGUID { get; set; }
-        //public Channels? Channels { get; set; } = new Channels()
+        //public _channels? _channels { get; set; } = new _channels()
         //{
         //    new Channel (0, "Signal0.bcf", 1 , 1000),
         //    new Channel (2, "Signal2.bcf", 3 , 1000),
@@ -31,7 +31,7 @@ namespace Internships_in_neurotech.Models
         public Channels() { }
     }
 
-    public class Channel
+    public sealed class Channel
     {
         [XmlAttribute]
         public int UnicNumber;

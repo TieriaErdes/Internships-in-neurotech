@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 
 namespace Internships_in_neurotech.Models
 {
-    public class SerializedChannel
+    public sealed class SerializedChannel
     {
         public BOSMeth? bosMeth;
 
