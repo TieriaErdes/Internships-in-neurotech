@@ -120,11 +120,14 @@
   <data name="AdditionalInformation" xml:space="preserve">
     <value>Additional information:</value>
   </data>
+  <data name="ChartTitle" xml:space="preserve">
+    <value>Chart</value>
+  </data>
   <data name="Choosinglanguage" xml:space="preserve">
     <value>Choosing language:</value>
   </data>
   <data name="ClearThePoints" xml:space="preserve">
-    <value>ClearThePoints</value>
+    <value>Clear the points</value>
   </data>
   <data name="ExpectedValue" xml:space="preserve">
     <value>Expected value</value>
@@ -178,5 +181,11 @@ Please select a folder with signals.</value>
   </data>
   <data name="Type" xml:space="preserve">
     <value>Type: </value>
+  </data>
+  <data name="XAxis" xml:space="preserve">
+    <value>X, milliseconds</value>
+  </data>
+  <data name="YAxis" xml:space="preserve">
+    <value>Y</value>
   </data>
 </root>

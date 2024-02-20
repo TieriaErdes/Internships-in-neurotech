@@ -70,6 +70,15 @@ namespace Internships_in_neurotech.Lang {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Chart.
+        /// </summary>
+        public static string ChartTitle {
+            get {
+                return ResourceManager.GetString("ChartTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Choosinglanguage.
         /// </summary>
         public static string Choosinglanguage {
@@ -237,6 +246,24 @@ namespace Internships_in_neurotech.Lang {
         public static string Type {
             get {
                 return ResourceManager.GetString("Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на X.
+        /// </summary>
+        public static string XAxis {
+            get {
+                return ResourceManager.GetString("XAxis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Y.
+        /// </summary>
+        public static string YAxis {
+            get {
+                return ResourceManager.GetString("YAxis", resourceCulture);
             }
         }
     }

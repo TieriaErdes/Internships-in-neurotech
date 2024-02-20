@@ -1,9 +1,9 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using Internships_in_neurotech.Services;
 using Internships_in_neurotech.ViewModels;
 using Internships_in_neurotech.Views;
-using Internships_in_neurotech.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Globalization;

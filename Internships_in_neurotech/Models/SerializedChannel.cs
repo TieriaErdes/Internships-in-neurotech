@@ -7,26 +7,25 @@ namespace Internships_in_neurotech.Models
 {
     public class SerializedChannel
     {
-
         public BOSMeth? bosMeth;
 
-        private XmlSerializer formatter = new XmlSerializer(typeof(BOSMeth));
+        private XmlSerializer _formatter = new XmlSerializer(typeof(BOSMeth));
 
         /// <summary>
         /// полный путь к обрабатываемым файлам
         /// </summary>
         public string? DirectoryPath;
 
-        private const string fileName = @"MethDescription.xml";
+        private const string _fileName = @"MethDescription.xml";
 
         // Десериализатор 
         private void DeserializeData()
         {
             try
             {
-                using (FileStream fileStream = new FileStream(Path.Combine(DirectoryPath, fileName), FileMode.Open))
+                using (FileStream fileStream = new FileStream(Path.Combine(DirectoryPath!, _fileName), FileMode.Open))
                 {
-                    bosMeth = formatter.Deserialize(fileStream) as BOSMeth ?? throw new Exception("Deserializing xml file is failed");
+                    bosMeth = _formatter.Deserialize(fileStream) as BOSMeth ?? throw new Exception("Deserializing xml file is failed");
 
                     if (bosMeth.Channels == null) throw new Exception("Channel list equals to null");
 

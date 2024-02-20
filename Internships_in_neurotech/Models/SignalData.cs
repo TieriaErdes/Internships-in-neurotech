@@ -1,11 +1,7 @@
-﻿using DynamicData;
-using ReactiveUI;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Threading.Tasks;
 
 namespace Internships_in_neurotech.Models
@@ -15,15 +11,15 @@ namespace Internships_in_neurotech.Models
         public double[][] DataFromFile;
 
         public double[][] averageValue;
-        public double[][] minValue;
         public double[][] maxValue;
+        public double[][] minValue;
 
-        public double[] absolutAverageValue;
-        public double[] absolutMinValue;
-        public double[] absolutMaxValue;
+        private double[] _absoluteAverageValue;
+        private double[] _absoluteMinValue;
+        private double[] _absoluteMaxValue;
 
-        private Task[] tasks;
-        private const int tickLength = 1000;
+        private Task[]? _tasks;
+        private const int _tickLength = 1000;
 
         /// <summary>
         /// Класс реализует обработку сигналов из файлов, названия которых указаны в файле MethDescription.xml
@@ -40,28 +36,27 @@ namespace Internships_in_neurotech.Models
             minValue = new double[channelsCount][];
             maxValue = new double[channelsCount][];
 
-            absolutAverageValue = new double[channelsCount];
-            absolutMaxValue = new double[channelsCount];
-            absolutMinValue = new double[channelsCount];
+            _absoluteAverageValue = new double[channelsCount];
+            _absoluteMaxValue = new double[channelsCount];
+            _absoluteMinValue = new double[channelsCount];
 
-            Waiting(serializedChannel);
+            StartTasksAsync(serializedChannel);
         }
 
-        private async void Waiting(SerializedChannel serializedChannel)
+        private async void StartTasksAsync(SerializedChannel serializedChannel)
         {
-            tasks = new Task[serializedChannel.bosMeth!.Channels!.Count];
-            for (int i = 0; i < tasks.Length; i++)
+            _tasks = new Task[serializedChannel.bosMeth!.Channels!.Count];
+            for (int i = 0; i < _tasks.Length; i++)
             {
-                tasks[i] = GetDataAsync(Path.Combine(serializedChannel.DirectoryPath!, serializedChannel.bosMeth.Channels[i].SignalFileName!),
-                i, serializedChannel.bosMeth.Channels[i].EffectiveFd);
+                _tasks[i] = GetDataAsync(Path.Combine(serializedChannel.DirectoryPath!, serializedChannel.bosMeth.Channels[i].SignalFileName!), i);
             }
 
-            await Task.WhenAll(tasks);
+            await Task.WhenAll(_tasks);
         }
 
 
         //                   полный путь и название файла   индекс потока   частота дискретизации 
-        private async Task GetDataAsync(string signalPath, int index, int sizeOfTicks)
+        private async Task GetDataAsync(string signalPath, int index)
         {
             await Task.Run(() =>
             {
@@ -72,64 +67,114 @@ namespace Internships_in_neurotech.Models
                         // Просто таймер для засечения достаточности быстродействия алгоритма
                         var stopWatch = Stopwatch.StartNew();
 
+                        long fileLength = signalFile.Length / sizeof(double);
 
-                        // Если размер файла меньше чем десять окон, которыми ведётся отсчёт, то...
-                        if (signalFile.Length < (tickLength * 10 * sizeof(double)))
-                            // В соответствующей файлу строке выделяется массив памяти равный количеству чисел double в нём
-                            DataFromFile[index] = new double[signalFile.Length / sizeof(double)];
-                        else
-                            DataFromFile[index] = new double[tickLength * 10];
-
-
-                        averageValue[index] = new double[signalFile.Length / sizeof(double) / tickLength + 1];
-                        minValue[index] = new double[signalFile.Length / sizeof(double) / tickLength + 1];
-                        maxValue[index] = new double[signalFile.Length / sizeof(double) / tickLength + 1];
-
-                        // Фрагмент файла длинной 1000 тиков double
-                        byte[] currentPartOfFile = new byte[tickLength * sizeof(double)];
-                        // Счётчик сколько тиков прошло
-                        int previousTicks = 0;
-
-                        // Чтение файла фрагментами
-                        while (signalFile.Position < signalFile.Length)
+                        // Если размер файла меньше чем сто окон (1000 единиц), которыми ведётся отсчёт, то...
+                        if (signalFile.Length < (_tickLength * 100 * sizeof(double)))
                         {
+                            averageValue[index] = new double[fileLength / _tickLength + 1];
+                            minValue[index] = new double[fileLength / _tickLength + 1];
+                            maxValue[index] = new double[fileLength / _tickLength + 1];
+
+                            // В соответствующей файлу строке выделяется массив памяти равный количеству чисел double в нём
+                            DataFromFile[index] = new double[fileLength];
+
+                            byte[] currentPartOfFile = new byte[_tickLength * sizeof(double)];
+                            // Счётчик сколько тиков прошло
+                            int previousTicks = 0;
+
                             int i;
-
-                            signalFile.Read(currentPartOfFile, 0, tickLength * sizeof(double));
-
-                            //Если длинна файла больше суммы числа уже обработанных тиков и тех, то будут обработаны сейчас, то...
-                            if (DataFromFile[index].Length > previousTicks + tickLength)
+                            // Чтение файла фрагментами
+                            while (signalFile.Position < signalFile.Length)
                             {
-                                for (i = 0; i < tickLength; i++)
-                                    // конвертация части файла,которую считали в эту итерацию                         так как файл в byte, то смещаем указатель на длину нужного нам типа (double)
-                                    DataFromFile[index][i + previousTicks] = BitConverter.ToDouble(currentPartOfFile, i * sizeof(double));
+
+                                signalFile.Read(currentPartOfFile, 0, _tickLength * sizeof(double));
+
+                                //Если длинна файла больше суммы числа уже обработанных тиков и тех, то будут обработаны сейчас, то...
+                                if (DataFromFile[index].Length > previousTicks + _tickLength)
+                                {
+                                    for (i = 0; i < _tickLength; i++)
+                                        // конвертация части файла,которую считали в эту итерацию
+                                        DataFromFile[index][i + previousTicks] = BitConverter.ToDouble(currentPartOfFile, i * sizeof(double));
+                                }
+                                else
+                                {
+                                    for (i = 0; i < (DataFromFile[index].Length - previousTicks); i++)
+                                        // конвертация части файла,которую считали в эту итерацию
+                                        DataFromFile[index][i + previousTicks] = BitConverter.ToDouble(currentPartOfFile, i * sizeof(double));
+                                }
+
+                                //Выделение фрагмента массива, в который мы заполнили значения в эту итерацию
+                                double[] partOfSignal = DataFromFile[index][previousTicks..(previousTicks + i)];
+
+                                averageValue[index][previousTicks / _tickLength] = partOfSignal.Average();
+                                minValue[index][previousTicks / _tickLength] = partOfSignal.Min();
+                                maxValue[index][previousTicks / _tickLength] = partOfSignal.Max();
+
+
+                                previousTicks += _tickLength;
                             }
-                            else
+
+
+                            _absoluteAverageValue[index] = averageValue[index].Average();
+                            _absoluteMaxValue[index] = averageValue[index].Max();
+                            _absoluteMinValue[index] = averageValue[index].Min();
+                        }
+
+                        // Если файл большого размера
+                        /// (хранение значений для выведения пользователю не предусмотрено с целью сокращения жизни переменных)
+                        else 
+                        {
+                            // использование дополнительных переменных массивов,чтобы уменьшить продолжительность жизни массивов (garbage collector)
+                            double[] _averageValue = new double[fileLength / _tickLength + 1];
+                            double[] _minValue = new double[fileLength / _tickLength + 1];
+                            double[] _maxValue = new double[fileLength / _tickLength + 1];
+
+                            byte[] currentPartOfFile = new byte[_tickLength * sizeof(double)];
+                            // Счётчик сколько тиков прошло
+                            long previousTicks = 0;
+
+                            double[] partOfSignal;
+
+                            int i;
+                            // Чтение файла фрагментами
+                            while (signalFile.Position < signalFile.Length)
                             {
-                                for (i = 0; i < (DataFromFile[index].Length - previousTicks); i++)
-                                    // конвертация части файла,которую считали в эту итерацию
-                                    DataFromFile[index][i + previousTicks] = BitConverter.ToDouble(currentPartOfFile, i * sizeof(double));
+                                partOfSignal = new double[_tickLength * 100];
+
+                                signalFile.Read(currentPartOfFile, 0, _tickLength * sizeof(double));
+
+                                //Если длинна файла больше суммы числа уже обработанных тиков и тех, то будут обработаны сейчас, то...
+                                if (fileLength > previousTicks + _tickLength)
+                                {
+                                    for (i = 0; i < _tickLength; i++)
+                                        // конвертация части файла,которую считали в эту итерацию 
+                                        partOfSignal[i + previousTicks] = BitConverter.ToDouble(currentPartOfFile, i * sizeof(double));
+                                }
+                                else
+                                {
+                                    for (i = 0; i < (fileLength - previousTicks); i++)
+                                        // конвертация части файла,которую считали в эту итерацию
+                                        partOfSignal[i + previousTicks] = BitConverter.ToDouble(currentPartOfFile, i * sizeof(double));
+                                }
+
+                                // Так как каждую итерацию мы заново выделяем память, то нет нужды выделять какой-то фрагмент (в отличии от случая выше)
+                                averageValue[index][previousTicks / _tickLength] = partOfSignal.Average();
+                                minValue[index][previousTicks / _tickLength] = partOfSignal.Min();
+                                maxValue[index][previousTicks / _tickLength] = partOfSignal.Max();
+
+
+                                previousTicks += _tickLength;
                             }
 
-                            //Выделение фрагмента массива, в который мы заполнили значения в эту итерацию
-                            double[] partOfSignal = DataFromFile[index][previousTicks..(previousTicks + i)];
-
-
-                            averageValue[index][previousTicks / tickLength] = partOfSignal.Average();
-                            minValue[index][previousTicks / tickLength] = partOfSignal.Min();
-                            maxValue[index][previousTicks / tickLength] = partOfSignal.Max();
-
-
-                            previousTicks += tickLength;
+                            _absoluteAverageValue[index] = _averageValue.Average();
+                            _absoluteMaxValue[index] = _averageValue.Max();
+                            _absoluteMinValue[index] = _averageValue.Min();
                         }
 
                         stopWatch.Stop();
                         Debug.WriteLine($"{index} --- {stopWatch.Elapsed}");
                     };
-
-                    absolutAverageValue[index] = averageValue[index].Average();
-                    absolutMaxValue[index] = averageValue[index].Max();
-                    absolutMinValue[index] = averageValue[index].Min();
                 }
                 catch (Exception ex)
                 {
@@ -139,7 +184,6 @@ namespace Internships_in_neurotech.Models
                     averageValue[index] = new double[] { 0 };
                     minValue[index] = new double[] { 0 };
                     maxValue[index] = new double[] { 0 };
-                    Debug.WriteLine($"{signalPath} doesn't found");
                 }
             });
         }

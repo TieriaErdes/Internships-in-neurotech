@@ -120,6 +120,9 @@
   <data name="AdditionalInformation" xml:space="preserve">
     <value>Additional information:</value>
   </data>
+  <data name="ChartTitle" xml:space="preserve">
+    <value>Chart</value>
+  </data>
   <data name="Choosinglanguage" xml:space="preserve">
     <value>Choosinglanguage</value>
   </data>
@@ -177,5 +180,11 @@
   </data>
   <data name="Type" xml:space="preserve">
     <value>Тип: </value>
+  </data>
+  <data name="XAxis" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="YAxis" xml:space="preserve">
+    <value>Y</value>
   </data>
 </root>

@@ -60,3 +60,7 @@ temporary clipboard storage
 			<Setter Property="BorderBrush" Value="Black"/>
 			<Setter Property="BorderThickness" Value="1"/>
 		</Style>
+
+
+
+		                        так как файл в byte, то смещаем указатель на длину нужного нам типа (double)
