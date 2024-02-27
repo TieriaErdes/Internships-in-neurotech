@@ -40,10 +40,10 @@ namespace Internships_in_neurotech.Models
             _absoluteMaxValue = new double[channelsCount];
             _absoluteMinValue = new double[channelsCount];
 
-            StartTasksAsync(serializedChannel);
+            StartTasks(serializedChannel);
         }
 
-        private async void StartTasksAsync(SerializedChannel serializedChannel)
+        private async void StartTasks(SerializedChannel serializedChannel)
         {
             _tasks = new Task[serializedChannel.bosMeth!.Channels!.Count];
             for (int i = 0; i < _tasks.Length; i++)

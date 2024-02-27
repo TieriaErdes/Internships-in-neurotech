@@ -119,8 +119,13 @@ namespace Internships_in_neurotech.ViewModels
             ChartTitle.Text = _channels!.bosMeth!.Channels![selectedSignal].SignalFileName!;
         }
 
+
+        private const byte ExpectationButton = 0;
+        private const byte MinButton = 1;
+        private const byte MaxButton = 2;
+
         [RelayCommand]
-        public void DisplayMathPoints(string senderComponentParameter)
+        public void DisplayMathPoints(byte senderComponentParameter)
         {
             if (selectedSignal == -1)
             {
@@ -130,13 +135,13 @@ namespace Internships_in_neurotech.ViewModels
 
             switch (senderComponentParameter)
             {
-                case "ExpectationButton":
+                case ExpectationButton:
                     PointGenerator(_signalData!.averageValue[selectedSignal]);
                     break;
-                case "MinButton":
+                case MinButton:
                     PointGenerator(_signalData!.minValue[selectedSignal]);
                     break;
-                case "MaxButton":
+                case MaxButton:
                     PointGenerator(_signalData!.maxValue[selectedSignal]);
                     break;
                 default:
@@ -224,6 +229,7 @@ namespace Internships_in_neurotech.ViewModels
 
             XAxes[0].Name = Lang.Resources.XAxis;
             YAxes[0].Name= Lang.Resources.YAxis;
+            ChartTitle.Text = Lang.Resources.ChartTitle;
         }
 
         private void SetSignalsState()
@@ -299,7 +305,7 @@ namespace Internships_in_neurotech.ViewModels
                 case 3:
                     return Lang.Resources.SignalType3;
                 default:
-                    return "";
+                    return channel.Type.ToString();
             }
         }
 

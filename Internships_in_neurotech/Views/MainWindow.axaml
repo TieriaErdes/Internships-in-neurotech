@@ -116,11 +116,11 @@
 								<Grid ShowGridLines="False" RowDefinitions="Auto, Auto, Auto, Auto, Auto">
 									<Label Grid.Row="0" Content="{x:Static lang:Resources.AdditionalInformation}"/>
 									<Button Grid.Row="1" Content="{x:Static lang:Resources.ExpectedValue}" Margin="10, 10, 0, 0" 
-											Command="{Binding DisplayMathPoints}" CommandParameter="ExpectationButton"/>
+											Command="{Binding DisplayMathPoints}" CommandParameter="0"/>
 									<Button Grid.Row="2" Content="{x:Static lang:Resources.MinimaAtIntervals}" Margin="10, 10, 0, 0"
-											Command="{Binding DisplayMathPoints}" CommandParameter="MinButton"/>
+											Command="{Binding DisplayMathPoints}" CommandParameter="1"/>
 									<Button Grid.Row="3" Content="{x:Static lang:Resources.MaximumsAtIntervals}" Margin="10, 10, 0, 0"
-											Command="{Binding DisplayMathPoints}" CommandParameter="MaxButton"/>
+											Command="{Binding DisplayMathPoints}" CommandParameter="2"/>
 									<Button Grid.Row="4" Content="{x:Static lang:Resources.ClearThePoints}" Margin="10, 10, 0, 0"
 											Command="{Binding PointCleaner}"/>
 								</Grid>
