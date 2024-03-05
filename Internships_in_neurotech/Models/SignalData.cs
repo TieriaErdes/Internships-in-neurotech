@@ -28,7 +28,7 @@ namespace Internships_in_neurotech.Models
         /// <param name="serializedChannel"></param>
         public SignalData(in SerializedChannel serializedChannel)
         {
-            int channelsCount = serializedChannel.bosMeth!.Channels!.Count;
+            int channelsCount = serializedChannel.bosMeth!.Channels!.Length;
 
             DataFromFile = new double[channelsCount][];
 
@@ -45,7 +45,7 @@ namespace Internships_in_neurotech.Models
 
         private async void StartTasks(SerializedChannel serializedChannel)
         {
-            _tasks = new Task[serializedChannel.bosMeth!.Channels!.Count];
+            _tasks = new Task[serializedChannel.bosMeth!.Channels!.Length];
             for (int i = 0; i < _tasks.Length; i++)
             {
                 _tasks[i] = GetDataAsync(Path.Combine(serializedChannel.DirectoryPath!, serializedChannel.bosMeth.Channels[i].SignalFileName!), i);

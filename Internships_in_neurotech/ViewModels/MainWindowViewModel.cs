@@ -38,15 +38,15 @@ namespace Internships_in_neurotech.ViewModels
         private string? _InformationEffectiveFdOfSignal;
 
 
-        private ObservableCollection<string>? _channelNames;
+        private ObservableCollection<string>? _ChannelNames;
         /// <summary>
         /// Реализует в себе динамическое хранение списка строк названий файлов сигналов.
         /// Значения строк получают Item в SignalsPopupListBox (MainWindow)
         /// </summary>
         public ObservableCollection<string>? ChannelNames
         {
-            get { return _channelNames; }
-            set { SetProperty(ref _channelNames, value); }
+            get { return _ChannelNames; }
+            set { SetProperty(ref _ChannelNames, value); }
         }
 
         #endregion
@@ -54,13 +54,13 @@ namespace Internships_in_neurotech.ViewModels
         /// <summary>
         /// Его дети хранят в себе информацию о массиве сигналов (их конфигурации)
         /// </summary>
-        private SerializedChannel? _channels;
+        private SerializedChannel? _Channels;
 
         /// <summary>
         /// Хранит значения сигналов из соответствующих им сигналов.
         /// Индекс информации, соответствующий некоторому сигналу, равен его порядковому номеру в MethDescription.xml
         /// </summary>
-        private SignalData? _signalData;
+        private SignalData? _SignalData;
 
 
         // Динамический список observable значений для графика
@@ -110,13 +110,13 @@ namespace Internships_in_neurotech.ViewModels
         {
             _ChartValues = new ObservableCollection<ObservableValue>();
 
-            foreach (var item in _signalData!.DataFromFile[selectedSignal])
+            foreach (var item in _SignalData!.DataFromFile[selectedSignal])
             {
                 _ChartValues.Add(new(item));
             }
 
             Series![0].Values = _ChartValues;
-            ChartTitle.Text = _channels!.bosMeth!.Channels![selectedSignal].SignalFileName!;
+            ChartTitle.Text = _Channels!.bosMeth!.Channels![selectedSignal].SignalFileName!;
         }
 
 
@@ -136,13 +136,13 @@ namespace Internships_in_neurotech.ViewModels
             switch (senderComponentParameter)
             {
                 case ExpectationButton:
-                    PointGenerator(_signalData!.averageValue[selectedSignal]);
+                    PointGenerator(_SignalData!.averageValue[selectedSignal]);
                     break;
                 case MinButton:
-                    PointGenerator(_signalData!.minValue[selectedSignal]);
+                    PointGenerator(_SignalData!.minValue[selectedSignal]);
                     break;
                 case MaxButton:
-                    PointGenerator(_signalData!.maxValue[selectedSignal]);
+                    PointGenerator(_SignalData!.maxValue[selectedSignal]);
                     break;
                 default:
                     Debug.WriteLine($"{senderComponentParameter} can not display points");
@@ -156,7 +156,7 @@ namespace Internships_in_neurotech.ViewModels
 
             for (int i = 0; resultArray.Length > i; i++)
             {
-                points.Add(new ObservablePoint(x: (i * _channels!.bosMeth!.Channels![selectedSignal].EffectiveFd), y: resultArray[i]));
+                points.Add(new ObservablePoint(x: (i * _Channels!.bosMeth!.Channels![selectedSignal].EffectiveFd), y: resultArray[i]));
             }
 
             if (Series!.Count > 1) Series.RemoveAt(1);
@@ -177,7 +177,7 @@ namespace Internships_in_neurotech.ViewModels
             {
                 new Axis
                 {
-                    Name = "",
+                    Name = string.Empty,
                     NamePaint = new SolidColorPaint(SKColors.Silver),
 
                     LabelsPaint = new SolidColorPaint(SKColors.Silver),
@@ -191,7 +191,7 @@ namespace Internships_in_neurotech.ViewModels
             {
                 new Axis
                 {
-                    Name = "",
+                    Name = string.Empty,
                     NamePaint = new SolidColorPaint(SKColors.Silver),
 
                     LabelsPaint = new SolidColorPaint(SKColors.Silver),
@@ -234,7 +234,7 @@ namespace Internships_in_neurotech.ViewModels
 
         private void SetSignalsState()
         {
-            if (_channels is null)
+            if (_Channels is null)
                 SignalsStatePresenter = Lang.Resources.SignalsState;
             else
                 SignalsStatePresenter = Lang.Resources.SignalsStateCorrectly;
@@ -255,17 +255,17 @@ namespace Internships_in_neurotech.ViewModels
                 if (folder is null) return;
 
                 // класс десериализации MethDescroption.xml. Хранит в себе же все данные о сигналах 
-                _channels = new SerializedChannel(folder.TryGetLocalPath());
+                _Channels = new SerializedChannel(folder.TryGetLocalPath());
                 SetSignalsState();
-                if (_channels is null) return;
+                if (_Channels is null) return;
 
                 ChannelNames = new ObservableCollection<string>();
-                foreach (var channel in _channels.bosMeth!.Channels!)
+                foreach (var channel in _Channels.bosMeth!.Channels!)
                 {
                     ChannelNames.Add(channel.SignalFileName!);
                 }
 
-                _signalData = new SignalData(in _channels);
+                _SignalData = new SignalData(in _Channels);
             }
             catch (Exception ex)
             {
@@ -282,9 +282,9 @@ namespace Internships_in_neurotech.ViewModels
 
             Debug.WriteLine("Call successful");
 
-            for (int i = 0; i < _channels!.bosMeth!.Channels!.Count; i++)
+            for (int i = 0; i < _Channels!.bosMeth!.Channels!.Length; i++)
             {
-                if (_channels.bosMeth.Channels[i].SignalFileName!.Equals(selectedItemName))
+                if (_Channels.bosMeth.Channels[i].SignalFileName!.Equals(selectedItemName))
                 {
                     selectedSignal = i;
                     CreatingSelectedChart();
@@ -315,10 +315,10 @@ namespace Internships_in_neurotech.ViewModels
         {
             SetSignalsState();
 
-            InformationNameOfSignal = Lang.Resources.Name + _channels!.bosMeth!.Channels![selectedSignal].SignalFileName;
-            InformationTypeOfSignal = Lang.Resources.Type + GetType(_channels.bosMeth.Channels[selectedSignal]);
-            InformationUnicNumberOfSignal = Lang.Resources.Number + _channels.bosMeth.Channels[selectedSignal].UnicNumber.ToString();
-            InformationEffectiveFdOfSignal = Lang.Resources.Fd + _channels.bosMeth.Channels[selectedSignal].EffectiveFd.ToString() + Lang.Resources.Hz;
+            InformationNameOfSignal = Lang.Resources.Name + _Channels!.bosMeth!.Channels![selectedSignal].SignalFileName;
+            InformationTypeOfSignal = Lang.Resources.Type + GetType(_Channels.bosMeth.Channels[selectedSignal]);
+            InformationUnicNumberOfSignal = Lang.Resources.Number + _Channels.bosMeth.Channels[selectedSignal].UnicNumber.ToString();
+            InformationEffectiveFdOfSignal = Lang.Resources.Fd + _Channels.bosMeth.Channels[selectedSignal].EffectiveFd.ToString() + Lang.Resources.Hz;
 
             XAxes[0].Name = Lang.Resources.XAxis;
             YAxes[0].Name = Lang.Resources.YAxis;

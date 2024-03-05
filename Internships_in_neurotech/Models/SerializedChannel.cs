@@ -43,10 +43,10 @@ namespace Internships_in_neurotech.Models
         /// <summary>
         /// Constructor for deserialize data from xml file
         /// </summary>
-        public SerializedChannel(string? path)
+        public SerializedChannel(string path)
         {
             //DirectoryPath = Path.GetDirectoryName(path) + "\\" ?? throw new Exception($"DirectoryPath is equals to null");
-            DirectoryPath = path + Path.DirectorySeparatorChar; 
+            DirectoryPath = Path.Join(path, Path.DirectorySeparatorChar.ToString()); 
             DeserializeData();
         }
     }
